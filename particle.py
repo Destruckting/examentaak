@@ -5,7 +5,7 @@ last updated: 31/03/2026
 """
 from collections import namedtuple
 import numpy as np
-from matplotlib import pyplot as plt
+#from matplotlib import pyplot as plt
 
 class Particle:
     """Particle class"""
@@ -83,19 +83,22 @@ class Neutron(Particle):
     def dist(self,dist):
         """distance setter"""
         self._dist=dist
-    def randomphi(self):
+    @staticmethod
+    def randomphi():
         """randomizing phi"""
         randkey_phi=np.random.default_rng()
         randnum_phi=randkey_phi.uniform(0,1)
         randval_phi=2*np.pi*randnum_phi
         return randval_phi
-    def randomtheta(self):
+    @staticmethod
+    def randomtheta():
         """randomizing theta"""
         randkey_theta=np.random.default_rng()
         randnum_theta=randkey_theta.uniform(-1, 1)
-        randval_theta=np.arccos((randnum_theta))
+        randval_theta=np.arccos(randnum_theta)
         return float(randval_theta)
-    def randomdistance(self):
+    @staticmethod
+    def randomdistance():
         """randomizing distance"""
         randkey_dist=np.random.default_rng()
         randnum_dist=randkey_dist.uniform(0,1)
@@ -109,8 +112,21 @@ class Neutron(Particle):
         output=out(float(newx),float(newy),float(newz))
         return output
 
+class Uranium(Particle):
+    """Uranium class"""
+    def __init__(self,neutron):
+        self.xpos=neutron.endpoint().x
+        self.ypos=neutron.endpoint().y
+        self.zpos=neutron.endpoint().z
+    def fission(self):
+        newneutron1=Neutron(self.xpos,self.ypos,self.zpos)
+        newneutron2=Neutron(self.xpos,self.ypos,self.zpos)
+        out=namedtuple('fission','neutron1 neutron2')
+        output=out(newneutron1,newneutron2)
+        return output
+
 if __name__ == '__main__':
     myparticle=Neutron(0,0,0)
-    print(myparticle.endpoint())
-    print(myparticle.distance())
-    print(myparticle.dist)
+    myuranium=Uranium(myparticle)
+    print(myuranium)
+    print(myuranium.fission())
