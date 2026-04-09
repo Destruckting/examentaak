@@ -3,6 +3,7 @@ particle class and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
 last updated: 31/03/2026
 """
+from collections import namedtuple
 import numpy as np
 from matplotlib import pyplot as plt
 
@@ -49,10 +50,11 @@ class Particle:
     def __str__(self):
         """Printable representation of particle"""
         return f'{self.__class__.__name__} at point (x={self.xpos}, y={self.ypos}, z={self.zpos})'
+
 class Neutron(Particle):
     """Neutron class"""
     def __init__(self,xpos,ypos,zpos):
-        """initialize the random number generator"""
+        """initialize the class with integrated random number generator"""
         super().__init__(xpos,ypos,zpos)
         self.phi=self.randomphi()
         self.theta=self.randomtheta()
@@ -79,7 +81,7 @@ class Neutron(Particle):
         return self._dist
     @dist.setter
     def dist(self,dist):
-        """dist setter"""
+        """distance setter"""
         self._dist=dist
     def randomphi(self):
         """randomizing phi"""
@@ -94,13 +96,21 @@ class Neutron(Particle):
         randval_theta=np.arccos((randnum_theta))
         return float(randval_theta)
     def randomdistance(self):
+        """randomizing distance"""
         randkey_dist=np.random.default_rng()
         randnum_dist=randkey_dist.uniform(0,1)
         return float(randnum_dist)
+    def endpoint(self):
+        """calculates the endpoint of the particle"""
+        newx=self.xpos+self.dist*np.sin(self.theta)*np.cos(self.phi)
+        newy=self.ypos+self.dist*np.sin(self.theta)*np.sin(self.phi)
+        newz=self.zpos+self.dist*np.cos(self.theta)
+        out=namedtuple('newpositions','x y z')
+        output=out(float(newx),float(newy),float(newz))
+        return output
 
 if __name__ == '__main__':
-    myparticle=Neutron(1,2,3)
-    mypar=Particle(7,42,69)
-    print(myparticle)
-    print(mypar)
-    print(myparticle.theta,myparticle.phi,myparticle.dist)
+    myparticle=Neutron(0,0,0)
+    print(myparticle.endpoint())
+    print(myparticle.distance())
+    print(myparticle.dist)
