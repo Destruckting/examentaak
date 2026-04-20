@@ -114,13 +114,12 @@ class Neutron(Particle):
 
 class Uranium(Particle):
     """Uranium class"""
-    def __init__(self,neutron : Neutron):
+    def __init__(self, neutron: Neutron):
         if not type(neutron)==Neutron:
-            raise TypeError(colored("This type of input is not supported."))
-        self.xpos=neutron.endpoint().x
-        self.ypos=neutron.endpoint().y
-        self.zpos=neutron.endpoint().z
-    def fission(self) -> Neutron:
+            raise TypeError(colored("This type of input is not supported.",'red'))
+        super().__init__(neutron.endpoint().x, neutron.endpoint().y, neutron.endpoint().z)
+
+    def fission(self) -> tuple:
         newneutron1=Neutron(self.xpos,self.ypos,self.zpos)
         newneutron2=Neutron(self.xpos,self.ypos,self.zpos)
         out=namedtuple('fission','neutron1 neutron2')
@@ -132,4 +131,4 @@ if __name__ == '__main__':
     myuranium=Uranium(myparticle)
     print(myuranium)
     print(myuranium.fission())
-    Uranium("Hello World!")
+    #Uranium("Hello World!")
