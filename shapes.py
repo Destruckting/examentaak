@@ -7,7 +7,7 @@ import os
 from termcolor import colored
 
 os.system('color')
-class Point():
+class Point:
     def __init__(self,x,y,z):
         self.x=x
         self.y=y
