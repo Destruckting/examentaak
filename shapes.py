@@ -43,11 +43,15 @@ class Point:
         if not isinstance(newz,(int,float)):
             raise TypeError(colored('z must be an integer or a float','red'))
         self._z=newz
+
     def __add__(self, other):
         if not isinstance(other, Point):
             raise TypeError(colored('Second point must be an instance of Point','red'))
         return Point(self.x+other.x,self.y+other.y,self.z+other.z)
+
     def __sub__(self, other):
+        if not isinstance(other, Point):
+            raise TypeError(colored('Second point must be an instance of Point','red'))
         return Point(self.x-other.x,self.y-other.y,self.z-other.z)
 
 
