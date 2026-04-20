@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="made Point class">
-      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="optimized with pycodestyle">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/shapes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +166,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776686243400</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="optimized with pycodestyle">
+      <option name="closed" value="true" />
+      <created>1776687395881</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1776687395881</updated>
+    </task>
+    <task id="LOCAL-00014" summary="removed parenthesis">
+      <option name="closed" value="true" />
+      <created>1776687480008</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1776687480008</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +222,8 @@
     <MESSAGE value="added clarity in class and function documentation" />
     <MESSAGE value="added documentation" />
     <MESSAGE value="made Point class" />
-    <option name="LAST_COMMIT_MESSAGE" value="made Point class" />
+    <MESSAGE value="optimized with pycodestyle" />
+    <MESSAGE value="removed parenthesis" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed parenthesis" />
   </component>
 </project>
