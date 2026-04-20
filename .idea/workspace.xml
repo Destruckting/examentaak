@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="optimized with pycodestyle">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="some small changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/shapes.py" afterDir="false" />
     </list>
@@ -182,7 +182,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776687480008</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="made __add__ and __sub__">
+      <option name="closed" value="true" />
+      <created>1776688950212</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1776688950212</updated>
+    </task>
+    <task id="LOCAL-00016" summary="some small changes">
+      <option name="closed" value="true" />
+      <created>1776688992838</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1776688992838</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +240,8 @@
     <MESSAGE value="made Point class" />
     <MESSAGE value="optimized with pycodestyle" />
     <MESSAGE value="removed parenthesis" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed parenthesis" />
+    <MESSAGE value="made __add__ and __sub__" />
+    <MESSAGE value="some small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some small changes" />
   </component>
 </project>
