@@ -1,15 +1,15 @@
 """
 particle class and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 31/03/2026
+last updated: 20/04/2026
 """
 from collections import namedtuple
 import numpy as np
-#from matplotlib import pyplot as plt
+from termcolor import colored
 
 class Particle:
     """Particle class"""
-    def __init__(self,xpos,ypos,zpos):
+    def __init__(self,xpos : float, ypos : float, zpos : float):
         """Initialise particle"""
         self.xpos=xpos
         self.ypos=ypos
@@ -44,10 +44,10 @@ class Particle:
         if not isinstance(newzpos, (float, int)):
             raise TypeError
         self._zpos = newzpos
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Printable representation of particle"""
         return f'{self.__class__.__name__}(xpos={self.xpos}, ypos={self.ypos}, zpos={self.zpos})'
-    def __str__(self):
+    def __str__(self) -> str:
         """Printable representation of particle"""
         return f'{self.__class__.__name__} at point (x={self.xpos}, y={self.ypos}, z={self.zpos})'
 
@@ -84,26 +84,26 @@ class Neutron(Particle):
         """distance setter"""
         self._dist=dist
     @staticmethod
-    def randomphi():
+    def randomphi() -> float:
         """randomizing phi"""
         randkey_phi=np.random.default_rng()
         randnum_phi=randkey_phi.uniform(0,1)
         randval_phi=2*np.pi*randnum_phi
         return randval_phi
     @staticmethod
-    def randomtheta():
+    def randomtheta() -> float:
         """randomizing theta"""
         randkey_theta=np.random.default_rng()
         randnum_theta=randkey_theta.uniform(-1, 1)
         randval_theta=np.arccos(randnum_theta)
         return float(randval_theta)
     @staticmethod
-    def randomdistance():
+    def randomdistance() -> float:
         """randomizing distance"""
         randkey_dist=np.random.default_rng()
         randnum_dist=randkey_dist.uniform(0,1)
         return float(randnum_dist)
-    def endpoint(self):
+    def endpoint(self) -> tuple:
         """calculates the endpoint of the particle"""
         newx=self.xpos+self.dist*np.sin(self.theta)*np.cos(self.phi)
         newy=self.ypos+self.dist*np.sin(self.theta)*np.sin(self.phi)
@@ -114,11 +114,13 @@ class Neutron(Particle):
 
 class Uranium(Particle):
     """Uranium class"""
-    def __init__(self,neutron):
+    def __init__(self,neutron : Neutron):
+        if not type(neutron)==Neutron:
+            raise TypeError(colored("This type of input is not supported."))
         self.xpos=neutron.endpoint().x
         self.ypos=neutron.endpoint().y
         self.zpos=neutron.endpoint().z
-    def fission(self):
+    def fission(self) -> Neutron:
         newneutron1=Neutron(self.xpos,self.ypos,self.zpos)
         newneutron2=Neutron(self.xpos,self.ypos,self.zpos)
         out=namedtuple('fission','neutron1 neutron2')
@@ -130,3 +132,4 @@ if __name__ == '__main__':
     myuranium=Uranium(myparticle)
     print(myuranium)
     print(myuranium.fission())
+    Uranium("Hello World!")
