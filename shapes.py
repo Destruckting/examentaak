@@ -74,3 +74,26 @@ class Simulator:
         """init shapes class"""
         self.amount = amount_of_points
         self.center = center
+
+    @property
+    def amount(self):
+        return self._amount
+
+    @amount.setter
+    def amount(self, newamount):
+        if not isinstance(newamount,int):
+            raise TypeError(colored('amount must be an integer', 'red'))
+        if not newamount>0:
+            raise ValueError(colored('amount must be a value greater than zero','red'))
+        self._amount = newamount
+
+    @property
+    def center(self):
+        return self._center
+
+    @center.setter
+    def center(self, newcenter):
+        if not isinstance(newcenter,Point):
+            raise TypeError(colored('center must be a Point','red'))
+        self._center = newcenter
+
