@@ -112,66 +112,65 @@ class Simulator:
 
 class BeamSim(Simulator):
     """simulates beam of uranium"""
-    def __init__(self, width: float, height: float, depth: float, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, mass: float, scale: float, amount_of_points=100, center=Point(0, 0, 0)):
         """init beam simmulator class"""
         super().__init__(amount_of_points, center)
-        self.width = width
-        self.height = height
-        self.depth = depth
+        self.mass = mass
+        self.scale = scale
+        self._a=(self.mass*self.scale)**(1/3)
+        self._b=(self.mass/(self.scale**2))**(1/3)
 
     @property
-    def width(self):
-        """width property"""
-        return self._width
+    def mass(self):
+        """mass property"""
+        return self._mass
 
-    @width.setter
-    def width(self, newwidth):
-        """width setter"""
-        if not isinstance(newwidth, (int, float)):
-            raise TypeError(colored('width must be an integer or a float', 'red'))
-        if not newwidth>0:
-            raise ValueError(colored('width must be a value greater than zero', 'red'))
-        self._width = newwidth
-
-    @property
-    def height(self):
-        """height property"""
-        return self._height
-
-    @height.setter
-    def height(self, newheight):
-        """height setter"""
-        if not isinstance(newheight, (int, float)):
-            raise TypeError(colored('height must be an integer or a float', 'red'))
-        if not newheight>0:
-            raise ValueError(colored('height must be a value greater than zero', 'red'))
-        self._height = newheight
+    @mass.setter
+    def mass(self, newmass):
+        """mass setter"""
+        if not isinstance(newmass, (int, float)):
+            raise TypeError(colored('mass must be an integer or a float', 'red'))
+        if not newmass>0:
+            raise ValueError(colored('mass must be a value greater than zero','red'))
+        self._mass = newmass
 
     @property
-    def depth(self):
-        return self._depth
+    def scale(self):
+        """scale property"""
+        return self._scale
 
-    @depth.setter
-    def depth(self, newdepth):
-        if not isinstance(newdepth, (int, float)):
-            raise TypeError(colored('depth must be an integer or a float', 'red'))
-        if not newdepth>0:
-            raise ValueError(colored('depth must be a value greater than zero', 'red'))
-        self._depth = newdepth
+    @scale.setter
+    def scale(self, newscale):
+        """scale setter"""
+        if not isinstance(newscale, (int, float)):
+            raise TypeError(colored('scale must be an integer or a float', 'red'))
+        if not newscale>0:
+            raise ValueError(colored('scale must be a value greater than zero','red'))
+        self._scale = newscale
+
+    @property
+    def a(self):
+        return self._a
+    @property
+    def b(self):
+        return self._b
 
     @staticmethod
-    def randomx() -> float:
+    def randomx(self) -> float:
         randkey_x = np.random.default_rng()
-        randnum_x = randkey_x.uniform(0, 1)
-        return float(randnum_x)
+        randnum_x = randkey_x.uniform(-0.5, 0.5)
+        x_value= self.a*randnum_x
+        return float(x_value)
     @staticmethod
-    def randomy() -> float:
+    def randomy(self) -> float:
         randkey_y = np.random.default_rng()
-        randnum_y = randkey_y.uniform(0, 1)
-        return float(randnum_y)
+        randnum_y = randkey_y.uniform(-0.5, 0.5)
+        y_value=self.a*randnum_y
+        return float(y_value)
     @staticmethod
-    def randomz() -> float:
+    def randomz(self) -> float:
         randkey_z = np.random.default_rng()
-        randnum_z = randkey_z.uniform(0, 1)
-        return float(randnum_z)
+        randnum_z = randkey_z.uniform(-0.5, 0.5)
+        z_value=self.b*randnum_z
+        return float(z_value)
 

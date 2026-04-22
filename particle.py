@@ -114,7 +114,7 @@ class Neutron(Particle):
     def randomtheta() -> float:
         """randomizing theta"""
         randkey_theta = np.random.default_rng()
-        randnum_theta = randkey_theta.uniform(-1, 1)
+        randnum_theta = randkey_theta.uniform(-0.5, 0.5)
         randval_theta = np.arccos(randnum_theta)
         return float(randval_theta)
 
@@ -158,6 +158,7 @@ class Uranium(Particle):
 
 if __name__ == '__main__':
     myparticle = Neutron(0, 0, 0)
+    print(myparticle.endpoint())
     myuranium = Uranium(myparticle)
     print(myuranium)
     print(myuranium.fission())
