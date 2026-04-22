@@ -11,7 +11,7 @@ import numpy as np
 
 class Point:
     """Point class"""
-    def __init__(self, x, y, z):
+    def __init__(self, x: float, y: float, z: float):
         self.x = x
         self.y = y
         self.z = z
@@ -52,21 +52,21 @@ class Point:
             raise TypeError(colored('z must be an integer or a float', 'red'))
         self._z = newz
 
-    def __add__(self, other):
+    def __add__(self, other) -> Point:
         """Adding two points"""
         if not isinstance(other, Point):
             raise TypeError(colored('Second point must be an instance'
                                     ' of Point', 'red'))
         return Point(self.x+other.x, self.y+other.y, self.z+other.z)
 
-    def __sub__(self, other):
+    def __sub__(self, other) -> Point:
         """Subtracting two points"""
         if not isinstance(other, Point):
             raise TypeError(colored('Second point must be an instance'
                                     ' of Point','red'))
         return Point(self.x-other.x, self.y-other.y, self.z-other.z)
 
-    def spherecoord(self):
+    def spherecoord(self) -> tuple:
         """converting to spherical coordinates"""
         dist = float(np.sqrt(self.x**2+self.y**2+self.z**2))
         phi = float(np.arccos(self.z/dist))
@@ -112,11 +112,12 @@ class Simulator:
 
 class BeamSim(Simulator):
     """simulates beam of uranium"""
-    def __init__(self, width, height, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, width: float, height: float, depth: float, amount_of_points=100, center=Point(0, 0, 0)):
         """init beam simmulator class"""
         super().__init__(amount_of_points, center)
         self.width = width
         self.height = height
+        self.depth = depth
 
     @property
     def width(self):
@@ -128,6 +129,8 @@ class BeamSim(Simulator):
         """width setter"""
         if not isinstance(newwidth, (int, float)):
             raise TypeError(colored('width must be an integer or a float', 'red'))
+        if not newwidth>0:
+            raise ValueError(colored('width must be a value greater than zero', 'red'))
         self._width = newwidth
 
     @property
@@ -140,4 +143,35 @@ class BeamSim(Simulator):
         """height setter"""
         if not isinstance(newheight, (int, float)):
             raise TypeError(colored('height must be an integer or a float', 'red'))
+        if not newheight>0:
+            raise ValueError(colored('height must be a value greater than zero', 'red'))
         self._height = newheight
+
+    @property
+    def depth(self):
+        return self._depth
+
+    @depth.setter
+    def depth(self, newdepth):
+        if not isinstance(newdepth, (int, float)):
+            raise TypeError(colored('depth must be an integer or a float', 'red'))
+        if not newdepth>0:
+            raise ValueError(colored('depth must be a value greater than zero', 'red'))
+        self._depth = newdepth
+
+    @staticmethod
+    def randomx(self) -> float:
+        randkey_x = np.random.default_rng()
+        randnum_x = randkey_x.uniform(0, 1)
+        return float(randnum_x)
+    @staticmethod
+    def randomy(self) -> float:
+        randkey_y = np.random.default_rng()
+        randnum_y = randkey_y.uniform(0, 1)
+        return float(randnum_y)
+    @staticmethod
+    def randomz(self) -> float:
+        randkey_z = np.random.default_rng()
+        randnum_z = randkey_z.uniform(0, 1)
+        return float(randnum_z)
+
