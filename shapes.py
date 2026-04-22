@@ -160,17 +160,17 @@ class BeamSim(Simulator):
         self._depth = newdepth
 
     @staticmethod
-    def randomx(self) -> float:
+    def randomx() -> float:
         randkey_x = np.random.default_rng()
         randnum_x = randkey_x.uniform(0, 1)
         return float(randnum_x)
     @staticmethod
-    def randomy(self) -> float:
+    def randomy() -> float:
         randkey_y = np.random.default_rng()
         randnum_y = randkey_y.uniform(0, 1)
         return float(randnum_y)
     @staticmethod
-    def randomz(self) -> float:
+    def randomz() -> float:
         randkey_z = np.random.default_rng()
         randnum_z = randkey_z.uniform(0, 1)
         return float(randnum_z)
