@@ -217,6 +217,8 @@ class BeamSim(Simulator):
         else:
             return False
 
+class SphereSim(Simulator):
+    """simulates sphere of uranium"""
 
 if __name__ == '__main__':
     testsim=BeamSim(1,1,1000,Point(0,0,0))
