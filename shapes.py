@@ -111,6 +111,37 @@ class Simulator:
             raise TypeError(colored('center must be a Point','red'))
         self._center = newcenter
 
+    def in_particle(self):
+        return True
+
+    def randomx(self):
+        return 1
+
+    def randomy(self):
+        return 1
+
+    def randomz(self):
+        return 1
+
+    def survirorfrac(self)->tuple:
+        """calculate surviror fraction"""
+        in_volume=0
+        out_volume=0
+        for i in range(self.amount):
+            neutron=Neutron(self.randomx(),self.randomy(),self.randomz())
+            uranium=Uranium(neutron)
+            for _,particle in enumerate(uranium.fission()):
+                if self.in_particle(particle.xpos,particle.ypos,particle.zpos):
+                    in_volume=in_volume+1
+                else:
+                    out_volume=out_volume+1
+        fraction=in_volume/self.amount
+        percent_in=in_volume/(2*self.amount)
+        percent_out=out_volume/(2*self.amount)
+        tup=namedtuple('data','percent_in percent_out survivor_fraction')
+        data=tup(percent_in,percent_out,fraction)
+        return data
+
 
 class BeamSim(Simulator):
     """simulates beam of uranium"""
@@ -159,21 +190,18 @@ class BeamSim(Simulator):
         """b property"""
         return self._b
 
-    @staticmethod
     def randomx(self) -> float:
         """ x randomizer"""
         randkey_x = np.random.default_rng()
         randnum_x = randkey_x.uniform(-0.5, 0.5)
         x_value= self.a*randnum_x
         return float(x_value)
-    @staticmethod
     def randomy(self) -> float:
         """y randomizer"""
         randkey_y = np.random.default_rng()
         randnum_y = randkey_y.uniform(-0.5, 0.5)
         y_value=self.a*randnum_y
         return float(y_value)
-    @staticmethod
     def randomz(self) -> float:
         """z randomizer"""
         randkey_z = np.random.default_rng()
@@ -182,30 +210,14 @@ class BeamSim(Simulator):
         return float(z_value)
 
     def in_particle(self,x ,y ,z):
-        if (x>(self.center.x-self.a/2) and x<(self.center.x+self.a/2)
-                and (y>self.center.y-self.a/2) and (y<self.center.y+self.a/2)
-                and (z>self.center.z-self.a/2) and (z<self.center.z+self.a/2)):
+        if ((self.center.x - self.a / 2) < x < (self.center.x + self.a / 2)
+                and (self.center.y-self.a/2)<y<(self.center.y+self.a/2)
+                and (self.center.z-self.a/2)<z<(self.center.z+self.a/2)):
             return True
         else:
             return False
-    def survirorfrac(self)->float:
-        """calculate surviror fraction"""
-        in_volume=0
-        out_volume=0
-        for i in range(self.amount):
-            neutron=Neutron(self.randomx(),self.randomy(),self.randomz())
-            uranium=Uranium(neutron)
-            for i,particle in uranium.fission():
-                if self.in_particle(particle.xpos,particle.ypos,particle.zpos):
-                    in_volume=in_volume+1
-                else:
-                    out_volume=out_volume+1
-        fraction=in_volume/self.amount
-        percent_in=in_volume/(2*self.amount)
-        percent_out=out_volume/(2*self.amount)
-        tup=namedtuple('data','percent_in percent_out survivor_fraction')
-        data=tup(percent_in,percent_out,fraction)
-        return data
 
 
-
+if __name__ == '__main__':
+    testsim=BeamSim(1,1,1000,Point(0,0,0))
+    print(testsim.survirorfrac())
