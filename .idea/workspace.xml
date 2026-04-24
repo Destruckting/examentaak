@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="fixed error in SphereSim">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="fixed survivorfraction so it works right, started adding __str__ and __repr__">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/shapes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777022221465</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fixed survivorfraction so it works right, started adding __str__ and __repr__">
+      <option name="closed" value="true" />
+      <created>1777033470109</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1777033470109</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +347,7 @@
     <MESSAGE value="put survivor fraction in parent class" />
     <MESSAGE value="created circle simmulator class" />
     <MESSAGE value="fixed error in SphereSim" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error in SphereSim" />
+    <MESSAGE value="fixed survivorfraction so it works right, started adding __str__ and __repr__" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed survivorfraction so it works right, started adding __str__ and __repr__" />
   </component>
 </project>

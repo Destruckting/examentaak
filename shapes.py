@@ -89,10 +89,11 @@ class Point:
 
 class Simulator:
     """shapes parent class"""
-    def __init__(self, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, mass: float, amount_of_points=100, center=Point(0, 0, 0)):
         """init shapes class"""
         self.amount = amount_of_points
         self.center = center
+        self.mass = mass
 
     @property
     def amount(self):
@@ -120,10 +121,24 @@ class Simulator:
             raise TypeError(colored('center must be a Point','red'))
         self._center = newcenter
 
+    @property
+    def mass(self):
+        """mass property"""
+        return self._mass
+
+    @mass.setter
+    def mass(self, newmass):
+        """mass setter"""
+        if not isinstance(newmass, (int, float)):
+            raise TypeError(colored('mass must be an integer or a float', 'red'))
+        if not newmass > 0:
+            raise ValueError(colored('mass must be a value greater than zero', 'red'))
+        self._mass = newmass
+
     def __repr__(self):
-        return f'{self.__class__.__name__}: N={self.amoun}, center={self.center}'
+        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, mass={self.mass}'
     def __str__(self):
-        return f'Simulator parent class, does {self.amount} simulations for an object wit center {self.center}'
+        return f'Simulator parent class, does {self.amount} simulations for an object wit center {self.center} and mass {self.mass}'
 
     def in_particle(self, x, y, z):
         return True
@@ -155,25 +170,10 @@ class BeamSim(Simulator):
     """simulates beam of uranium"""
     def __init__(self, mass: float, scale: float, amount_of_points=100, center=Point(0, 0, 0)):
         """init beam simmulator class"""
-        super().__init__(amount_of_points, center)
-        self.mass = mass
+        super().__init__(mass,amount_of_points, center)
         self.scale = scale
         self._a=(self.mass*self.scale)**(1/3)
         self._b=(self.mass/(self.scale**2))**(1/3)
-
-    @property
-    def mass(self):
-        """mass property"""
-        return self._mass
-
-    @mass.setter
-    def mass(self, newmass):
-        """mass setter"""
-        if not isinstance(newmass, (int, float)):
-            raise TypeError(colored('mass must be an integer or a float', 'red'))
-        if not newmass>0:
-            raise ValueError(colored('mass must be a value greater than zero','red'))
-        self._mass = newmass
 
     @property
     def scale(self):
@@ -197,6 +197,11 @@ class BeamSim(Simulator):
     def b(self):
         """b property"""
         return self._b
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, M={self.mass}, S={self.scale}, a={self.a}, b={self.b}'
+    def __str__(self):
+        return f'Beam simulation: does {self.amount} simulations around point {self.center} for a mass of {self.mass} and dimensions: width={self.a}, height={self.a} and depth={self.b}'
 
     def randomstart(self) -> tuple:
         """ starting point randomizer"""
@@ -223,9 +228,9 @@ class BeamSim(Simulator):
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
-    def __init__(self, radius, amount_of_points=100, center=Point(0, 0, 0)):
-        super().__init__(amount_of_points, center)
-        self.radius=radius
+    def __init__(self, mass, amount_of_points=100, center=Point(0, 0, 0)):
+        super().__init__(mass, amount_of_points, center)
+        self.radius=float(np.cbrt(3*self.mass/(4*np.pi)))
 
     @property
     def radius(self):
@@ -240,6 +245,11 @@ class SphereSim(Simulator):
         if not newradius>0:
             raise ValueError(colored('radius must be a value greater than zero','red'))
         self._radius = newradius
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, r={self.radius}'
+    def __str__(self):
+        return f'Sphere simulation: does {self.amount} simulations around point {self.center} for a mass of {self.mass} and a radius of {self.radius}.'
 
     def randomstart(self) -> tuple:
         """start position randomizer"""
@@ -259,7 +269,9 @@ class SphereSim(Simulator):
 
 
 if __name__ == '__main__':
-    testsim=BeamSim(1,1,10000,Point(0,0,0))
+    testsim=BeamSim(1,1,100,Point(0,0,0))
+    print(testsim)
     print(testsim.survirorfrac())
-    testsphere=SphereSim(1,10000,Point(0,0,0))
+    testsphere=SphereSim(1,100,Point(0,0,0))
+    print(testsphere)
     print(testsphere.survirorfrac())
