@@ -6,9 +6,10 @@ last updated: 20/04/2026
 
 from collections import namedtuple
 from math import sqrt
-from particle import Neutron, Uranium
 from termcolor import colored
 import numpy as np
+from particle import Neutron, Uranium
+
 
 
 class Point:
@@ -130,45 +131,55 @@ class Simulator:
     def mass(self, newmass):
         """mass setter"""
         if not isinstance(newmass, (int, float)):
-            raise TypeError(colored('mass must be an integer or a float', 'red'))
+            raise TypeError(colored('mass must be an integer or a float',
+                                    'red'))
         if not newmass > 0:
-            raise ValueError(colored('mass must be a value greater than zero', 'red'))
+            raise ValueError(colored('mass must be a value greater than zero',
+                                     'red'))
         self._mass = newmass
 
     def __repr__(self):
-        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, mass={self.mass}'
+        return (f'{self.__class__.__name__}: N={self.amount},'
+                f' center={self.center}, mass={self.mass}')
     def __str__(self):
-        return f'Simulator parent class, does {self.amount} simulations for an object wit center {self.center} and mass {self.mass}'
+        return (f'Simulator parent class, does {self.amount} simulations for '
+                f'an object wit center {self.center} and mass {self.mass}')
 
-    def in_particle(self, x, y, z):
+    def in_object(self, x: float, y: float, z: float):
+        """checks if the given coordinates are in the volume """
         return True
 
     def randomstart(self):
+        """random starting point"""
         return 1, 1, 1
 
     def survirorfrac(self)->tuple:
         """calculate surviror fraction"""
         in_volume=0
         out_volume=0
-        for i in range(self.amount):
+        for _ in range(self.amount):
             startpos=self.randomstart()
             uranium=Uranium(startpos.x, startpos.y, startpos.z)
             for _,particle in enumerate(uranium.fission()):
-                if self.in_particle(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                if self.in_object(particle.endpoint().x,
+                                    particle.endpoint().y,
+                                    particle.endpoint().z):
                     in_volume+=1
                 else:
                     out_volume+=1
         fraction=in_volume/self.amount
         frac_in=in_volume/(2*self.amount)
         frac_out=out_volume/(2*self.amount)
-        outtup=namedtuple('survival','fraction percent_in_volume percent_out_volume')
+        outtup=namedtuple('survival',
+                          'fraction percent_in_volume percent_out_volume')
         output=outtup(fraction,frac_in,frac_out)
         return output
 
 
 class BeamSim(Simulator):
     """simulates beam of uranium"""
-    def __init__(self, mass: float, scale: float, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, mass: float, scale: float, amount_of_points=100,
+                 center=Point(0, 0, 0)):
         """init beam simmulator class"""
         super().__init__(mass,amount_of_points, center)
         self.scale = scale
@@ -184,9 +195,11 @@ class BeamSim(Simulator):
     def scale(self, newscale):
         """scale setter"""
         if not isinstance(newscale, (int, float)):
-            raise TypeError(colored('scale must be an integer or a float', 'red'))
+            raise TypeError(colored('scale must be an integer or a float',
+                                    'red'))
         if not newscale>0:
-            raise ValueError(colored('scale must be a value greater than zero','red'))
+            raise ValueError(colored('scale must be a value greater'
+                                     ' than zero', 'red'))
         self._scale = newscale
 
     @property
@@ -199,9 +212,14 @@ class BeamSim(Simulator):
         return self._b
 
     def __repr__(self):
-        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, M={self.mass}, S={self.scale}, a={self.a}, b={self.b}'
+        return (f'{self.__class__.__name__}: N={self.amount},'
+                f' center={self.center}, M={self.mass}, S={self.scale},'
+                f' a={self.a}, b={self.b}')
     def __str__(self):
-        return f'Beam simulation: does {self.amount} simulations around point {self.center} for a mass of {self.mass} and dimensions: width={self.a}, height={self.a} and depth={self.b}'
+        return (f'Beam simulation: does {self.amount} simulations around'
+                f' point {self.center} for a mass of {self.mass} and'
+                f' dimensions: width={self.a}, height={self.a} and'
+                f' depth={self.b}')
 
     def randomstart(self) -> tuple:
         """ starting point randomizer"""
@@ -218,13 +236,10 @@ class BeamSim(Simulator):
         output = outtup(x_value,y_value,z_value)
         return output
 
-    def in_particle(self,x ,y ,z):
-        if ((self.center.x - self.a / 2) < x < (self.center.x + self.a / 2)
+    def in_object(self,x ,y ,z):
+        return bool(((self.center.x - self.a / 2) < x < (self.center.x + self.a / 2)
                 and (self.center.y-self.a/2)<y<(self.center.y+self.a/2)
-                and (self.center.z-self.a/2)<z<(self.center.z+self.a/2)):
-            return True
-        else:
-            return False
+                and (self.center.z-self.a/2)<z<(self.center.z+self.a/2)))
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
@@ -241,31 +256,38 @@ class SphereSim(Simulator):
     def radius(self, newradius):
         """radius setter"""
         if not isinstance(newradius, (int, float)):
-            raise TypeError(colored('radius must be an integer or a float', 'red'))
+            raise TypeError(colored('radius must be an integer or a float'
+                                    , 'red'))
         if not newradius>0:
-            raise ValueError(colored('radius must be a value greater than zero','red'))
+            raise ValueError(colored('radius must be a value greater'
+                                     ' than zero','red'))
         self._radius = newradius
 
     def __repr__(self):
-        return f'{self.__class__.__name__}: N={self.amount}, center={self.center}, r={self.radius}'
+        return (f'{self.__class__.__name__}: N={self.amount},'
+                f' center={self.center}, r={self.radius}')
     def __str__(self):
-        return f'Sphere simulation: does {self.amount} simulations around point {self.center} for a mass of {self.mass} and a radius of {self.radius}.'
+        return (f'Sphere simulation: does {self.amount} simulations around'
+                f' point {self.center} for a mass of {self.mass} and'
+                f' a radius of {self.radius}.')
 
     def randomstart(self) -> tuple:
         """start position randomizer"""
-        neutron=Neutron(0, 0, 0) #dummy Neutron object to be able to use the static methods
-        randomx=self.center.x + (self.radius*neutron.randomdistance()) * np.sin(neutron.randomtheta()) * np.cos(neutron.randomphi())
-        randomy = self.center.y +(self.radius*neutron.randomdistance())*np.sin(neutron.randomtheta())*np.sin(neutron.randomphi())
-        randomz = self.center.z+(self.radius*neutron.randomdistance())*np.cos(neutron.randomtheta())
+        neutron=Neutron(0, 0, 0)
+        #dummy Neutron object to be able to use the static methods
+        randomx=(self.center.x + (self.radius*neutron.randomdistance()) *
+                 np.sin(neutron.randomtheta()) * np.cos(neutron.randomphi()))
+        randomy = (self.center.y +(self.radius*neutron.randomdistance())*
+                   np.sin(neutron.randomtheta())*np.sin(neutron.randomphi()))
+        randomz = (self.center.z+(self.radius*neutron.randomdistance())*
+                   np.cos(neutron.randomtheta()))
         outtup=namedtuple('startpos','x y z')
         output=outtup(randomx,randomy,randomz)
         return output
 
-    def in_particle(self,x ,y ,z):
-        if sqrt((x-self.center.x)**2+(y-self.center.y)**2+(z-self.center.z)**2)<=self.radius:
-            return True
-        else:
-            return False
+    def in_object(self,x ,y ,z):
+        return bool(sqrt((x-self.center.x)**2+(y-self.center.y)**2+
+                (z-self.center.z)**2)<=self.radius)
 
 
 if __name__ == '__main__':
