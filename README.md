@@ -8,8 +8,9 @@ File structure:
 
 
 
-* **particle.py** file containing particle class and subclasses
-* **randomizer.py** file containing the randomizer with spherical coordinates
+* **particle.py** file containing particle class and subclasses for neutrons and uranium
+* **shapes.py** file containing the simulator class and subclasses for spheres and beams
+* **randomizer.py** file containing the randomizer with spherical coordinates (testing file)
 * **test.py** file used for final testing and visualization of the problems in the task
 
 
