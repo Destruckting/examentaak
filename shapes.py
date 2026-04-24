@@ -241,15 +241,15 @@ class SphereSim(Simulator):
     def randomx(self) -> float:
         """x randomizer (using Neutron class)"""
         randomx=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomx.endpoint().newx
+        return randomx.endpoint().x
     def randomy(self) -> float:
         """y randomizer (using Neutron class)"""
         randomy=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomy.endpoint().newy
+        return randomy.endpoint().y
     def randomz(self) -> float:
         """z randomizer (using Neutron class)"""
         randomz=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomz.endpoint().newz
+        return randomz.endpoint().z
     def in_particle(self,x ,y ,z):
         if sqrt((x-self.center.x)**2+(y-self.center.y)**2+(z-self.center.z)**2)<=self.radius:
             return True
@@ -260,3 +260,5 @@ class SphereSim(Simulator):
 if __name__ == '__main__':
     testsim=BeamSim(1,1,1000,Point(0,0,0))
     print(testsim.survirorfrac())
+    testsphere=SphereSim(0.5,1000,Point(0,0,0))
+    print(testsphere.survirorfrac())
