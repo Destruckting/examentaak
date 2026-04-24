@@ -5,6 +5,7 @@ last updated: 20/04/2026
 """
 
 from collections import namedtuple
+from math import sqrt
 from particle import Neutron, Uranium
 from termcolor import colored
 import numpy as np
@@ -219,6 +220,42 @@ class BeamSim(Simulator):
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
+    def __init__(self, radius, amount_of_points=100, center=Point(0, 0, 0)):
+        super().__init__(amount_of_points, center)
+        self.radius=radius
+
+    @property
+    def radius(self):
+        """radius property"""
+        return self._radius
+
+    @radius.setter
+    def radius(self, newradius):
+        """radius setter"""
+        if not isinstance(newradius, (int, float)):
+            raise TypeError(colored('radius must be an integer or a float', 'red'))
+        if not newradius>0:
+            raise ValueError(colored('radius must be a value greater than zero','red'))
+        self._radius = newradius
+
+    def randomx(self) -> float:
+        """x randomizer (using Neutron class)"""
+        randomx=Neutron(self.center.x, self.center.y, self.center.z)
+        return randomx.endpoint().newx
+    def randomy(self) -> float:
+        """y randomizer (using Neutron class)"""
+        randomy=Neutron(self.center.x, self.center.y, self.center.z)
+        return randomy.endpoint().newy
+    def randomz(self) -> float:
+        """z randomizer (using Neutron class)"""
+        randomz=Neutron(self.center.x, self.center.y, self.center.z)
+        return randomz.endpoint().newz
+    def in_particle(self,x ,y ,z):
+        if sqrt((x-self.center.x)**2+(y-self.center.y)**2+(z-self.center.z)**2)<=self.radius:
+            return True
+        else:
+            return False
+
 
 if __name__ == '__main__':
     testsim=BeamSim(1,1,1000,Point(0,0,0))
