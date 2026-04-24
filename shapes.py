@@ -54,6 +54,14 @@ class Point:
             raise TypeError(colored('z must be an integer or a float', 'red'))
         self._z = newz
 
+    def __repr__(self):
+        """repr method"""
+        return f'Point(x={self.x}, y={self.y}, z={self.z})'
+
+    def __str__(self):
+        """str method"""
+        return f'(x={self.x}, y={self.y}, z={self.z})'
+
     def __add__(self, other) -> Point:
         """Adding two points"""
         if not isinstance(other, Point):
@@ -112,36 +120,35 @@ class Simulator:
             raise TypeError(colored('center must be a Point','red'))
         self._center = newcenter
 
-    def in_particle(self):
+    def __repr__(self):
+        return f'{self.__class__.__name__}: N={self.amoun}, center={self.center}'
+    def __str__(self):
+        return f'Simulator parent class, does {self.amount} simulations for an object wit center {self.center}'
+
+    def in_particle(self, x, y, z):
         return True
 
-    def randomx(self):
-        return 1
-
-    def randomy(self):
-        return 1
-
-    def randomz(self):
-        return 1
+    def randomstart(self):
+        return 1, 1, 1
 
     def survirorfrac(self)->tuple:
         """calculate surviror fraction"""
         in_volume=0
         out_volume=0
         for i in range(self.amount):
-            neutron=Neutron(self.randomx(),self.randomy(),self.randomz())
-            uranium=Uranium(neutron)
+            startpos=self.randomstart()
+            uranium=Uranium(startpos.x, startpos.y, startpos.z)
             for _,particle in enumerate(uranium.fission()):
-                if self.in_particle(particle.xpos,particle.ypos,particle.zpos):
-                    in_volume=in_volume+1
+                if self.in_particle(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                    in_volume+=1
                 else:
-                    out_volume=out_volume+1
+                    out_volume+=1
         fraction=in_volume/self.amount
-        percent_in=in_volume/(2*self.amount)
-        percent_out=out_volume/(2*self.amount)
-        tup=namedtuple('data','percent_in percent_out survivor_fraction')
-        data=tup(percent_in,percent_out,fraction)
-        return data
+        frac_in=in_volume/(2*self.amount)
+        frac_out=out_volume/(2*self.amount)
+        outtup=namedtuple('survival','fraction percent_in_volume percent_out_volume')
+        output=outtup(fraction,frac_in,frac_out)
+        return output
 
 
 class BeamSim(Simulator):
@@ -191,24 +198,20 @@ class BeamSim(Simulator):
         """b property"""
         return self._b
 
-    def randomx(self) -> float:
-        """ x randomizer"""
+    def randomstart(self) -> tuple:
+        """ starting point randomizer"""
         randkey_x = np.random.default_rng()
         randnum_x = randkey_x.uniform(-0.5, 0.5)
-        x_value= self.a*randnum_x
-        return float(x_value)
-    def randomy(self) -> float:
-        """y randomizer"""
+        x_value = self.a*randnum_x
         randkey_y = np.random.default_rng()
         randnum_y = randkey_y.uniform(-0.5, 0.5)
-        y_value=self.a*randnum_y
-        return float(y_value)
-    def randomz(self) -> float:
-        """z randomizer"""
+        y_value = self.a*randnum_y
         randkey_z = np.random.default_rng()
         randnum_z = randkey_z.uniform(-0.5, 0.5)
-        z_value=self.b*randnum_z
-        return float(z_value)
+        z_value = self.b*randnum_z
+        outtup = namedtuple('startpos','x y z')
+        output = outtup(x_value,y_value,z_value)
+        return output
 
     def in_particle(self,x ,y ,z):
         if ((self.center.x - self.a / 2) < x < (self.center.x + self.a / 2)
@@ -238,18 +241,16 @@ class SphereSim(Simulator):
             raise ValueError(colored('radius must be a value greater than zero','red'))
         self._radius = newradius
 
-    def randomx(self) -> float:
-        """x randomizer (using Neutron class)"""
-        randomx=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomx.endpoint().x
-    def randomy(self) -> float:
-        """y randomizer (using Neutron class)"""
-        randomy=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomy.endpoint().y
-    def randomz(self) -> float:
-        """z randomizer (using Neutron class)"""
-        randomz=Neutron(self.center.x, self.center.y, self.center.z)
-        return randomz.endpoint().z
+    def randomstart(self) -> tuple:
+        """start position randomizer"""
+        neutron=Neutron(0, 0, 0) #dummy Neutron object to be able to use the static methods
+        randomx=self.center.x + (self.radius*neutron.randomdistance()) * np.sin(neutron.randomtheta()) * np.cos(neutron.randomphi())
+        randomy = self.center.y +(self.radius*neutron.randomdistance())*np.sin(neutron.randomtheta())*np.sin(neutron.randomphi())
+        randomz = self.center.z+(self.radius*neutron.randomdistance())*np.cos(neutron.randomtheta())
+        outtup=namedtuple('startpos','x y z')
+        output=outtup(randomx,randomy,randomz)
+        return output
+
     def in_particle(self,x ,y ,z):
         if sqrt((x-self.center.x)**2+(y-self.center.y)**2+(z-self.center.z)**2)<=self.radius:
             return True
@@ -258,7 +259,7 @@ class SphereSim(Simulator):
 
 
 if __name__ == '__main__':
-    testsim=BeamSim(1,1,1000,Point(0,0,0))
+    testsim=BeamSim(1,1,10000,Point(0,0,0))
     print(testsim.survirorfrac())
-    testsphere=SphereSim(0.5,1000,Point(0,0,0))
+    testsphere=SphereSim(1,10000,Point(0,0,0))
     print(testsphere.survirorfrac())

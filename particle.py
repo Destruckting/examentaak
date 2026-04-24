@@ -25,7 +25,7 @@ class Particle:
     def xpos(self, newxpos):
         """Particle x position setter"""
         if not isinstance(newxpos, (float, int)):
-            raise TypeError
+            raise TypeError(colored('x position must be an integer or a float', 'red'))
         self._xpos = newxpos
 
     @property
@@ -37,7 +37,7 @@ class Particle:
     def ypos(self, newypos):
         """Particle y position setter"""
         if not isinstance(newypos, (float, int)):
-            raise TypeError
+            raise TypeError(colored('y position must be an integer or a float', 'red'))
         self._ypos = newypos
 
     @property
@@ -49,7 +49,7 @@ class Particle:
     def zpos(self, newzpos):
         """Particle z position setter"""
         if not isinstance(newzpos, (float, int)):
-            raise TypeError
+            raise TypeError(colored('z position must be an integer or a float', 'red'))
         self._zpos = newzpos
 
     def __repr__(self) -> str:
@@ -137,13 +137,6 @@ class Neutron(Particle):
 
 class Uranium(Particle):
     """Uranium class"""
-    def __init__(self, neutron: Neutron):
-        if not isinstance(neutron, Neutron):
-            raise TypeError(colored("This type of input"
-                                    " is not supported.", 'red'))
-        super().__init__(neutron.endpoint().x,
-                         neutron.endpoint().y, neutron.endpoint().z)
-
     def fission(self) -> tuple:
         """
         Creates two Neutron objects with starting position
@@ -159,7 +152,8 @@ class Uranium(Particle):
 if __name__ == '__main__':
     myparticle = Neutron(0, 0, 0)
     print(myparticle.endpoint())
-    myuranium = Uranium(myparticle)
+    myuranium = Uranium(myparticle.endpoint().x,
+                        myparticle.endpoint().y, myparticle.endpoint().z)
     print(myuranium)
     print(myuranium.fission())
     # Uranium("Hello World!")
