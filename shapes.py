@@ -7,7 +7,8 @@ last updated: 20/04/2026
 from collections import namedtuple
 from math import sqrt
 
-from matplotlib import markers
+from matplotlib.patches import Circle
+from mpl_toolkits.mplot3d import art3d
 from termcolor import colored
 import numpy as np
 import matplotlib.pyplot as plt
@@ -98,6 +99,8 @@ class Simulator:
         self.amount = amount_of_points
         self.center = center
         self.mass = mass
+        self._fig= plt.figure()
+        self._ax = self.fig.add_subplot(projection='3d')
 
     @property
     def amount(self):
@@ -142,6 +145,15 @@ class Simulator:
                                      'red'))
         self._mass = newmass
 
+    @property
+    def fig(self):
+        """figure property"""
+        return self._fig
+    @property
+    def ax(self):
+        """axis property"""
+        return self._ax
+
     def __repr__(self):
         return (f'{self.__class__.__name__}: N={self.amount},'
                 f' center={self.center}, mass={self.mass}')
@@ -182,7 +194,8 @@ class Simulator:
         output = outtup(fraction, frac_in, frac_out)
         return output
 
-    def plot_function(self,ax ,generation: list,marker_set, green_color: str, red_color: str):
+    def plot_function(self, generation: list,marker_set, green_color: str, red_color: str):
+        """plotting function for visual_simulation() function"""
         if not isinstance(generation,list):
             TypeError(colored('Generation must be a list of particles','red'))
         if not isinstance(green_color, str):
@@ -191,26 +204,26 @@ class Simulator:
             TypeError(colored('red_color must be a string of a hexcode', 'red'))
         for _,point in enumerate(generation):
             if self.in_object(point.endpoint().x, point.endpoint().y, point.endpoint().z):
-                ax.scatter(point.endpoint().x,
+                self.ax.scatter(point.endpoint().x,
                            point.endpoint().y,
                            point.endpoint().z,
                            marker=marker_set, color=green_color)
-                ax.plot(np.array([point.xpos, point.endpoint().x]),
+                self.ax.plot(np.array([point.xpos, point.endpoint().x]),
                         np.array([point.ypos, point.endpoint().y]),
                         np.array([point.zpos, point.endpoint().z]),
                         color=green_color, marker='none', linewidth=1)
             else:
-                ax.scatter(point.endpoint().x,
+                self.ax.scatter(point.endpoint().x,
                            point.endpoint().y,
                            point.endpoint().z,
                            marker=marker_set, color=red_color)
-                ax.plot(np.array([point.xpos, point.endpoint().x]),
+                self.ax.plot(np.array([point.xpos, point.endpoint().x]),
                         np.array([point.ypos, point.endpoint().y]),
                         np.array([point.zpos, point.endpoint().z]),
                         color=red_color, marker='none', linewidth=1)
 
     def visual_simulation(self):
-        """plotting points in 3d"""
+        """plotting simulated points in 3d"""
         # preparing the simulated points for every generation
         gen1 = self.randomstart()
         gen2 = []
@@ -248,42 +261,27 @@ class Simulator:
                 for _,neutron in enumerate(uranium.fission()):
                     gen7.append(neutron)
         # building figure
-        fig = plt.figure()
-        ax = fig.add_subplot(projection='3d')
-        print(type(ax))
+        self.ax.set_aspect('equal')
         # gen1
-        ax.scatter(gen1.x, gen1.y, gen1.z, marker='.', color='black')
-        continue_sim = True
+        self.ax.scatter(gen1.x, gen1.y, gen1.z, marker='.', color='black')
         # gen2
-        if not gen2 == [] or continue_sim == False:
-            self.plot_function(ax, gen2, '.', '#095324', '#681D2A')
-        else:
-            continue_sim = False
+        if not gen2 == []:
+            self.plot_function(gen2, '.', '#095324', '#681D2A')
         # gen3
-        if not gen3 == [] or continue_sim == False:
-            self.plot_function(ax, gen3, '.', '#096A26', '#7D1A29')
-        else:
-            continue_sim = False
+        if not gen3 == []:
+            self.plot_function(gen3, '.', '#096A26', '#7D1A29')
         # gen4
-        if not gen4 == [] or continue_sim == False:
-            self.plot_function(ax, gen4, '.', '#088223', '#941624')
-        else:
-            continue_sim = False
+        if not gen4 == []:
+            self.plot_function(gen4, '.', '#088223', '#941624')
         # gen5
-        if not gen5 == [] or continue_sim == False:
-            self.plot_function(ax, gen5, '.', '#079C1C', '#AC101C')
-        else:
-            continue_sim = False
+        if not gen5 == []:
+            self.plot_function(gen5, '.', '#079C1C', '#AC101C')
         # gen6
-        if not gen6 == [] or continue_sim == False:
-            self.plot_function(ax, gen6, '.', '#04B611', '#C60910')
-        else:
-            continue_sim = False
+        if not gen6 == []:
+            self.plot_function(gen6, '.', '#04B611', '#C60910')
         # gen7
-        if not gen7 == [] or continue_sim == False:
-            self.plot_function(ax, gen7, '.', '#00D100', '#E10000')
-        else:
-            continue_sim = False
+        if not gen7 == []:
+            self.plot_function(gen7, '.', '#00D100', '#E10000')
 
 
 class BeamSim(Simulator):
@@ -356,6 +354,51 @@ class BeamSim(Simulator):
                      (self.center.z-self.a/2) < z <
                      (self.center.z+self.a/2)))
 
+    def visual_simulation(self):
+        """plotting simulation of points in 3D, with overlay of the beam"""
+        super().visual_simulation()
+        #fig and ax are taken out of function for SphereSim
+        # front face of beam
+        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x + self.a/2,
+                          self.center.x + self.a/2, self.center.x - self.a/2,
+                          self.center.x - self.a/2]),
+                np.array([self.center.y + self.a/2, self.center.y + self.a/2,
+                          self.center.y - self.a/2, self.center.y - self.a/2,
+                          self.center.y + self.a/2]),
+                np.array([self.center.z - self.b/2, self.center.z - self.b/2,
+                          self.center.z - self.b/2, self.center.z - self.b/2,
+                          self.center.z - self.b/2]),
+                color='black', marker='none', linewidth=1)
+        # back face of beam
+        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x + self.a/2,
+                          self.center.x + self.a/2, self.center.x - self.a/2,
+                          self.center.x - self.a/2]),
+                np.array([self.center.y + self.a/2, self.center.y + self.a/2,
+                          self.center.y - self.a/2, self.center.y - self.a/2,
+                          self.center.y + self.a/2]),
+                np.array([self.center.z + self.b/2, self.center.z + self.b/2,
+                          self.center.z + self.b/2, self.center.z + self.b/2,
+                          self.center.z + self.b/2]),
+                color='black', marker='none', linewidth=1)
+        # lines connecting the faces
+        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x - self.a/2])
+                , np.array([self.center.y - self.a/2, self.center.y-self.a/2])
+                , np.array([self.center.z-self.b/2, self.center.z + self.b/2])
+                ,color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x + self.a / 2, self.center.x + self.a / 2])
+                , np.array([self.center.y + self.a / 2, self.center.y + self.a / 2])
+                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
+                , color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x - self.a / 2, self.center.x - self.a / 2])
+                , np.array([self.center.y + self.a / 2, self.center.y + self.a / 2])
+                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
+                , color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x + self.a / 2, self.center.x + self.a / 2])
+                , np.array([self.center.y - self.a / 2, self.center.y - self.a / 2])
+                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
+                , color='black', marker='none', linewidth=1)
+        self.ax.set_aspect('equal')
+
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
@@ -411,13 +454,32 @@ class SphereSim(Simulator):
                          (z-self.center.z) ** 2)
                     <= self.radius)
 
+    def visual_simulation(self):
+        """plotting simulation of points in 3D, with overlay of the beam"""
+        super().visual_simulation()
+        #fig and ax are taken out of the function to be able to add patch
+        circx=Circle((self.center.x, self.center.y),self.radius, edgecolor='black', facecolor='none', linewidth=1)
+        circy = Circle((self.center.x, self.center.y), self.radius, edgecolor='black', facecolor='none', linewidth=1)
+        circz = Circle((self.center.x, self.center.y), self.radius, edgecolor='black', facecolor='none', linewidth=1)
+        self.ax.add_patch(circx)
+        self.ax.add_patch(circy)
+        self.ax.add_patch(circz)
+        art3d.pathpatch_2d_to_3d(circx,z=self.center.z,zdir='x')
+        art3d.pathpatch_2d_to_3d(circy, z=self.center.z, zdir='y')
+        art3d.pathpatch_2d_to_3d(circz, z=self.center.z, zdir='z')
+        self.ax.set_aspect('equal')
+
 
 if __name__ == '__main__':
+
     testsim = BeamSim(1, 1, 100, Point(0, 0, 0))
     print(testsim)
     print(testsim.surviror_fraction())
     testsphere = SphereSim(1, 100, Point(0, 0, 0))
     print(testsphere)
     print(testsphere.surviror_fraction())
-    SphereSim(10,100,Point(0,0,0)).visual_simulation()
+    testsim.visual_simulation()
+    testsphere.visual_simulation()
     plt.show()
+    # be sure to put any simulations you don't want to plot after plt.show
+
