@@ -6,8 +6,11 @@ last updated: 20/04/2026
 
 from collections import namedtuple
 from math import sqrt
+
+from matplotlib import markers
 from termcolor import colored
 import numpy as np
+import matplotlib.pyplot as plt
 from particle import Neutron, Uranium
 
 
@@ -153,9 +156,11 @@ class Simulator:
 
     def randomstart(self) -> tuple:
         """random starting point"""
-        return 1, 1, 1
+        dummyname = namedtuple('dummystart', 'x y z')
+        dummyoutput = dummyname(0, 0, 0)
+        return dummyoutput
 
-    def survirorfrac(self) -> tuple:
+    def surviror_fraction(self) -> tuple:
         """calculate surviror fraction"""
         in_volume = 0
         out_volume = 0
@@ -176,6 +181,109 @@ class Simulator:
                             'fraction percent_in_volume percent_out_volume')
         output = outtup(fraction, frac_in, frac_out)
         return output
+
+    def plot_function(self,ax ,generation: list,marker_set, green_color: str, red_color: str):
+        if not isinstance(generation,list):
+            TypeError(colored('Generation must be a list of particles','red'))
+        if not isinstance(green_color, str):
+            TypeError(colored('green_color must be a string of a hexcode', 'red'))
+        if not isinstance(red_color, str):
+            TypeError(colored('red_color must be a string of a hexcode', 'red'))
+        for _,point in enumerate(generation):
+            if self.in_object(point.endpoint().x, point.endpoint().y, point.endpoint().z):
+                ax.scatter(point.endpoint().x,
+                           point.endpoint().y,
+                           point.endpoint().z,
+                           marker=marker_set, color=green_color)
+                ax.plot(np.array([point.xpos, point.endpoint().x]),
+                        np.array([point.ypos, point.endpoint().y]),
+                        np.array([point.zpos, point.endpoint().z]),
+                        color=green_color, marker='none', linewidth=1)
+            else:
+                ax.scatter(point.endpoint().x,
+                           point.endpoint().y,
+                           point.endpoint().z,
+                           marker=marker_set, color=red_color)
+                ax.plot(np.array([point.xpos, point.endpoint().x]),
+                        np.array([point.ypos, point.endpoint().y]),
+                        np.array([point.zpos, point.endpoint().z]),
+                        color=red_color, marker='none', linewidth=1)
+
+    def visual_simulation(self):
+        """plotting points in 3d"""
+        # preparing the simulated points for every generation
+        gen1 = self.randomstart()
+        gen2 = []
+        uranium1=Uranium(gen1.x,gen1.y,gen1.z)
+        for _,neutron in enumerate(uranium1.fission()):
+            gen2.append(neutron)
+        gen3 = []
+        for _,particle in enumerate(gen2):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen3.append(neutron)
+        gen4 = []
+        for _,particle in enumerate(gen3):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen4.append(neutron)
+        gen5 = []
+        for _,particle in enumerate(gen4):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen5.append(neutron)
+        gen6=[]
+        for _,particle in enumerate(gen5):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen6.append(neutron)
+        gen7=[]
+        for _,particle in enumerate(gen6):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen7.append(neutron)
+        # building figure
+        fig = plt.figure()
+        ax = fig.add_subplot(projection='3d')
+        print(type(ax))
+        # gen1
+        ax.scatter(gen1.x, gen1.y, gen1.z, marker='.', color='black')
+        continue_sim = True
+        # gen2
+        if not gen2 == [] or continue_sim == False:
+            self.plot_function(ax, gen2, '.', '#095324', '#681D2A')
+        else:
+            continue_sim = False
+        # gen3
+        if not gen3 == [] or continue_sim == False:
+            self.plot_function(ax, gen3, '.', '#096A26', '#7D1A29')
+        else:
+            continue_sim = False
+        # gen4
+        if not gen4 == [] or continue_sim == False:
+            self.plot_function(ax, gen4, '.', '#088223', '#941624')
+        else:
+            continue_sim = False
+        # gen5
+        if not gen5 == [] or continue_sim == False:
+            self.plot_function(ax, gen5, '.', '#079C1C', '#AC101C')
+        else:
+            continue_sim = False
+        # gen6
+        if not gen6 == [] or continue_sim == False:
+            self.plot_function(ax, gen6, '.', '#04B611', '#C60910')
+        else:
+            continue_sim = False
+        # gen7
+        if not gen7 == [] or continue_sim == False:
+            self.plot_function(ax, gen7, '.', '#00D100', '#E10000')
+        else:
+            continue_sim = False
 
 
 class BeamSim(Simulator):
@@ -251,7 +359,7 @@ class BeamSim(Simulator):
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
-    def __init__(self, mass, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, mass: float, amount_of_points=100, center=Point(0, 0, 0)):
         super().__init__(mass, amount_of_points, center)
         self.radius = float(np.cbrt(3*self.mass/(4*np.pi)))
 
@@ -307,7 +415,9 @@ class SphereSim(Simulator):
 if __name__ == '__main__':
     testsim = BeamSim(1, 1, 100, Point(0, 0, 0))
     print(testsim)
-    print(testsim.survirorfrac())
+    print(testsim.surviror_fraction())
     testsphere = SphereSim(1, 100, Point(0, 0, 0))
     print(testsphere)
-    print(testsphere.survirorfrac())
+    print(testsphere.surviror_fraction())
+    SphereSim(10,100,Point(0,0,0)).visual_simulation()
+    plt.show()
