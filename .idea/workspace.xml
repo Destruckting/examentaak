@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added beam and sphere overlay to sim">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="shifted gen1 to gen0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/shapes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -334,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777228931107</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="shifted gen1 to gen0">
+      <option name="closed" value="true" />
+      <created>1777278339697</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1777278339697</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="calculated endpoint of neutron using integrated randomizer" />
     <MESSAGE value="created uranium class and added a system to create two new Neutron objects" />
     <MESSAGE value="created shapes.py" />
     <MESSAGE value="added clarity in class and function documentation" />
@@ -389,6 +398,7 @@
     <MESSAGE value="optimization using pycodestyle" />
     <MESSAGE value="added plotting function and simmulation of 7 generations (random point is generation 1)" />
     <MESSAGE value="added beam and sphere overlay to sim" />
-    <option name="LAST_COMMIT_MESSAGE" value="added beam and sphere overlay to sim" />
+    <MESSAGE value="shifted gen1 to gen0" />
+    <option name="LAST_COMMIT_MESSAGE" value="shifted gen1 to gen0" />
   </component>
 </project>

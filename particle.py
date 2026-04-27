@@ -25,7 +25,8 @@ class Particle:
     def xpos(self, newxpos):
         """Particle x position setter"""
         if not isinstance(newxpos, (float, int)):
-            raise TypeError(colored('x position must be an integer or a float', 'red'))
+            raise TypeError(colored('x position must be an integer'
+                                    ' or a float', 'red'))
         self._xpos = newxpos
 
     @property
@@ -37,7 +38,8 @@ class Particle:
     def ypos(self, newypos):
         """Particle y position setter"""
         if not isinstance(newypos, (float, int)):
-            raise TypeError(colored('y position must be an integer or a float', 'red'))
+            raise TypeError(colored('y position must be an integer'
+                                    ' or a float', 'red'))
         self._ypos = newypos
 
     @property
@@ -49,7 +51,8 @@ class Particle:
     def zpos(self, newzpos):
         """Particle z position setter"""
         if not isinstance(newzpos, (float, int)):
-            raise TypeError(colored('z position must be an integer or a float', 'red'))
+            raise TypeError(colored('z position must be an integer'
+                                    ' or a float', 'red'))
         self._zpos = newzpos
 
     def __repr__(self) -> str:

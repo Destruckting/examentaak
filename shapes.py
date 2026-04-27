@@ -99,8 +99,8 @@ class Simulator:
         self.amount = amount_of_points
         self.center = center
         self.mass = mass
-        self._fig= plt.figure()
-        self._ax = self.fig.add_subplot(projection='3d')
+        self._fig = plt.figure()
+        self._ax = self.fig.add_subplot(111, projection='3d')
 
     @property
     def amount(self):
@@ -149,6 +149,7 @@ class Simulator:
     def fig(self):
         """figure property"""
         return self._fig
+
     @property
     def ax(self):
         """axis property"""
@@ -194,94 +195,126 @@ class Simulator:
         output = outtup(fraction, frac_in, frac_out)
         return output
 
-    def plot_function(self, generation: list,marker_set, green_color: str, red_color: str):
+    def __plot_function(self, generation: list, marker_set,
+                        green_color: str, red_color: str):
         """plotting function for visual_simulation() function"""
-        if not isinstance(generation,list):
-            TypeError(colored('Generation must be a list of particles','red'))
-        if not isinstance(green_color, str):
-            TypeError(colored('green_color must be a string of a hexcode', 'red'))
-        if not isinstance(red_color, str):
-            TypeError(colored('red_color must be a string of a hexcode', 'red'))
-        for _,point in enumerate(generation):
-            if self.in_object(point.endpoint().x, point.endpoint().y, point.endpoint().z):
+        # input protection not needed as the function is private
+        for _, point in enumerate(generation):
+            if self.in_object(point.endpoint().x,
+                              point.endpoint().y,
+                              point.endpoint().z):
                 self.ax.scatter(point.endpoint().x,
-                           point.endpoint().y,
-                           point.endpoint().z,
-                           marker=marker_set, color=green_color)
+                                point.endpoint().y,
+                                point.endpoint().z,
+                                marker=marker_set, color=green_color)
                 self.ax.plot(np.array([point.xpos, point.endpoint().x]),
-                        np.array([point.ypos, point.endpoint().y]),
-                        np.array([point.zpos, point.endpoint().z]),
-                        color=green_color, marker='none', linewidth=1)
+                             np.array([point.ypos, point.endpoint().y]),
+                             np.array([point.zpos, point.endpoint().z]),
+                             color=green_color, marker='none', linewidth=1)
             else:
                 self.ax.scatter(point.endpoint().x,
-                           point.endpoint().y,
-                           point.endpoint().z,
-                           marker=marker_set, color=red_color)
+                                point.endpoint().y,
+                                point.endpoint().z,
+                                marker=marker_set, color=red_color)
                 self.ax.plot(np.array([point.xpos, point.endpoint().x]),
-                        np.array([point.ypos, point.endpoint().y]),
-                        np.array([point.zpos, point.endpoint().z]),
-                        color=red_color, marker='none', linewidth=1)
+                             np.array([point.ypos, point.endpoint().y]),
+                             np.array([point.zpos, point.endpoint().z]),
+                             color=red_color, marker='none', linewidth=1)
 
     def visual_simulation(self):
         """plotting simulated points in 3d"""
         # preparing the simulated points for every generation
         gen0 = self.randomstart()
         gen1 = []
-        uranium1=Uranium(gen0.x, gen0.y, gen0.z)
-        for _,neutron in enumerate(uranium1.fission()):
+        uranium1 = Uranium(gen0.x, gen0.y, gen0.z)
+        for _, neutron in enumerate(uranium1.fission()):
             gen1.append(neutron)
         gen2 = []
-        for _,particle in enumerate(gen1):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
+        for _, particle in enumerate(gen1):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
                     gen2.append(neutron)
         gen3 = []
-        for _,particle in enumerate(gen2):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
+        for _, particle in enumerate(gen2):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
                     gen3.append(neutron)
         gen4 = []
-        for _,particle in enumerate(gen3):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
+        for _, particle in enumerate(gen3):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
                     gen4.append(neutron)
-        gen5=[]
-        for _,particle in enumerate(gen4):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
+        gen5 = []
+        for _, particle in enumerate(gen4):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
                     gen5.append(neutron)
-        gen6=[]
-        for _,particle in enumerate(gen5):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
+        gen6 = []
+        for _, particle in enumerate(gen5):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
                     gen6.append(neutron)
+        gen7 = []
+        for _, particle in enumerate(gen6):
+            if self.in_object(particle.endpoint().x,
+                              particle.endpoint().y,
+                              particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x,
+                                  particle.endpoint().y,
+                                  particle.endpoint().z)
+                for _, neutron in enumerate(uranium.fission()):
+                    gen7.append(neutron)
         # building figure
-        self.ax.set_aspect('equal')
         # gen0
         self.ax.scatter(gen0.x, gen0.y, gen0.z, marker='.', color='black')
         # gen1
-        if not gen1 == []:
-            self.plot_function(gen1, '.', '#095324', '#681D2A')
+        if gen1:  # uses implicit False if list is empty
+            self.__plot_function(gen1, '.', '#22480C', '#661130')
         # gen2
-        if not gen2 == []:
-            self.plot_function(gen2, '.', '#096A26', '#7D1A29')
+        if gen2:
+            self.__plot_function(gen2, '.', '#265E0D', '#7C1031')
         # gen3
-        if not gen3 == []:
-            self.plot_function(gen3, '.', '#088223', '#941624')
+        if gen3:
+            self.__plot_function(gen3, '.', '#26760C', '#940F30')
         # gen4
-        if not gen4 == []:
-            self.plot_function(gen4, '.', '#079C1C', '#AC101C')
+        if gen4:
+            self.__plot_function(gen4, '.', '#238E0B', '#AC0D2A')
         # gen5
-        if not gen5 == []:
-            self.plot_function(gen5, '.', '#04B611', '#C60910')
+        if gen5:
+            self.__plot_function(gen5, '.', '#1CA708', '#C60A21')
         # gen6
-        if not gen6 == []:
-            self.plot_function(gen6, '.', '#00D100', '#E10000')
+        if gen6:
+            self.__plot_function(gen6, '.', '#10C205', '#E00513')
+        # gen7
+        if gen7:
+            self.__plot_function(gen7, '.', '#00DD00', '#FC0000')
+        # setting axis
+        self.ax.set_aspect('equal')
 
 
 class BeamSim(Simulator):
@@ -357,52 +390,76 @@ class BeamSim(Simulator):
     def visual_simulation(self):
         """plotting simulation of points in 3D, with overlay of the beam"""
         super().visual_simulation()
-        #fig and ax are taken out of function for SphereSim
         # front face of beam
-        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x + self.a/2,
-                          self.center.x + self.a/2, self.center.x - self.a/2,
-                          self.center.x - self.a/2]),
-                np.array([self.center.y + self.a/2, self.center.y + self.a/2,
-                          self.center.y - self.a/2, self.center.y - self.a/2,
-                          self.center.y + self.a/2]),
-                np.array([self.center.z - self.b/2, self.center.z - self.b/2,
-                          self.center.z - self.b/2, self.center.z - self.b/2,
-                          self.center.z - self.b/2]),
-                color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x - self.a/2,
+                               self.center.x + self.a/2,
+                               self.center.x + self.a/2,
+                               self.center.x - self.a/2,
+                               self.center.x - self.a/2]),
+                     np.array([self.center.y + self.a/2,
+                               self.center.y + self.a/2,
+                               self.center.y - self.a/2,
+                               self.center.y - self.a/2,
+                               self.center.y + self.a/2]),
+                     np.array([self.center.z - self.b/2,
+                               self.center.z - self.b/2,
+                               self.center.z - self.b/2,
+                               self.center.z - self.b/2,
+                               self.center.z - self.b/2]),
+                     color='black', marker='none', linewidth=1)
         # back face of beam
-        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x + self.a/2,
-                          self.center.x + self.a/2, self.center.x - self.a/2,
-                          self.center.x - self.a/2]),
-                np.array([self.center.y + self.a/2, self.center.y + self.a/2,
-                          self.center.y - self.a/2, self.center.y - self.a/2,
-                          self.center.y + self.a/2]),
-                np.array([self.center.z + self.b/2, self.center.z + self.b/2,
-                          self.center.z + self.b/2, self.center.z + self.b/2,
-                          self.center.z + self.b/2]),
-                color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x - self.a/2,
+                               self.center.x + self.a/2,
+                               self.center.x + self.a/2,
+                               self.center.x - self.a/2,
+                               self.center.x - self.a/2]),
+                     np.array([self.center.y + self.a/2,
+                               self.center.y + self.a/2,
+                               self.center.y - self.a/2,
+                               self.center.y - self.a/2,
+                               self.center.y + self.a/2]),
+                     np.array([self.center.z + self.b/2,
+                               self.center.z + self.b/2,
+                               self.center.z + self.b/2,
+                               self.center.z + self.b/2,
+                               self.center.z + self.b/2]),
+                     color='black', marker='none', linewidth=1)
         # lines connecting the faces
-        self.ax.plot(np.array([self.center.x - self.a/2, self.center.x - self.a/2])
-                , np.array([self.center.y - self.a/2, self.center.y-self.a/2])
-                , np.array([self.center.z-self.b/2, self.center.z + self.b/2])
-                ,color='black', marker='none', linewidth=1)
-        self.ax.plot(np.array([self.center.x + self.a / 2, self.center.x + self.a / 2])
-                , np.array([self.center.y + self.a / 2, self.center.y + self.a / 2])
-                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
-                , color='black', marker='none', linewidth=1)
-        self.ax.plot(np.array([self.center.x - self.a / 2, self.center.x - self.a / 2])
-                , np.array([self.center.y + self.a / 2, self.center.y + self.a / 2])
-                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
-                , color='black', marker='none', linewidth=1)
-        self.ax.plot(np.array([self.center.x + self.a / 2, self.center.x + self.a / 2])
-                , np.array([self.center.y - self.a / 2, self.center.y - self.a / 2])
-                , np.array([self.center.z - self.b / 2, self.center.z + self.b / 2])
-                , color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x - self.a/2,
+                               self.center.x - self.a/2]),
+                     np.array([self.center.y - self.a/2,
+                               self.center.y-self.a/2]),
+                     np.array([self.center.z-self.b/2,
+                               self.center.z + self.b/2]),
+                     color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x + self.a / 2,
+                               self.center.x + self.a / 2]),
+                     np.array([self.center.y + self.a / 2,
+                               self.center.y + self.a / 2]),
+                     np.array([self.center.z - self.b / 2,
+                               self.center.z + self.b / 2]),
+                     color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x - self.a / 2,
+                               self.center.x - self.a / 2]),
+                     np.array([self.center.y + self.a / 2,
+                               self.center.y + self.a / 2]),
+                     np.array([self.center.z - self.b / 2,
+                               self.center.z + self.b / 2]),
+                     color='black', marker='none', linewidth=1)
+        self.ax.plot(np.array([self.center.x + self.a / 2,
+                               self.center.x + self.a / 2]),
+                     np.array([self.center.y - self.a / 2,
+                               self.center.y - self.a / 2]),
+                     np.array([self.center.z - self.b / 2,
+                               self.center.z + self.b / 2]),
+                     color='black', marker='none', linewidth=1)
         self.ax.set_aspect('equal')
 
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
-    def __init__(self, mass: float, amount_of_points=100, center=Point(0, 0, 0)):
+    def __init__(self, mass: float, amount_of_points=100,
+                 center=Point(0, 0, 0)):
         super().__init__(mass, amount_of_points, center)
         self.radius = float(np.cbrt(3*self.mass/(4*np.pi)))
 
@@ -427,9 +484,9 @@ class SphereSim(Simulator):
                 f' center={self.center}, r={self.radius}')
 
     def __str__(self):
-        return (f'Sphere simulation: does {self.amount} simulations around'
-                f' point {self.center} for a mass of {self.mass} and'
-                f' a radius of {self.radius}.')
+        return (f'Sphere simulation: does {self.amount}'
+                f' simulations around point {self.center} for a mass of'
+                f' {self.mass} and a radius of {self.radius}.')
 
     def randomstart(self) -> tuple:
         """start position randomizer"""
@@ -457,14 +514,16 @@ class SphereSim(Simulator):
     def visual_simulation(self):
         """plotting simulation of points in 3D, with overlay of the beam"""
         super().visual_simulation()
-        #fig and ax are taken out of the function to be able to add patch
-        circx=Circle((self.center.x, self.center.y),self.radius, edgecolor='black', facecolor='none', linewidth=1)
-        circy = Circle((self.center.x, self.center.y), self.radius, edgecolor='black', facecolor='none', linewidth=1)
-        circz = Circle((self.center.x, self.center.y), self.radius, edgecolor='black', facecolor='none', linewidth=1)
+        circx = Circle((self.center.x, self.center.y), self.radius,
+                       edgecolor='black', facecolor='none', linewidth=1)
+        circy = Circle((self.center.x, self.center.y), self.radius,
+                       edgecolor='black', facecolor='none', linewidth=1)
+        circz = Circle((self.center.x, self.center.y), self.radius,
+                       edgecolor='black', facecolor='none', linewidth=1)
         self.ax.add_patch(circx)
         self.ax.add_patch(circy)
         self.ax.add_patch(circz)
-        art3d.pathpatch_2d_to_3d(circx,z=self.center.z,zdir='x')
+        art3d.pathpatch_2d_to_3d(circx, z=self.center.z, zdir='x')
         art3d.pathpatch_2d_to_3d(circy, z=self.center.z, zdir='y')
         art3d.pathpatch_2d_to_3d(circz, z=self.center.z, zdir='z')
         self.ax.set_aspect('equal')
@@ -480,6 +539,6 @@ if __name__ == '__main__':
     print(testsphere.surviror_fraction())
     testsim.visual_simulation()
     testsphere.visual_simulation()
+    Simulator(1, 100, Point(0, 0, 0)).visual_simulation()
     plt.show()
     # be sure to put any simulations you don't want to plot after plt.show
-
