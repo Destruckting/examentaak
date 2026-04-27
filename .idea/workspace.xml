@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="shifted gen1 to gen0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shapes.py" beforeDir="false" afterPath="$PROJECT_DIR$/shapes.py" afterDir="false" />
-    </list>
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="update date updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -344,7 +340,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777278339697</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="optimized using pylint and pycodestyle">
+      <option name="closed" value="true" />
+      <created>1777296376965</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1777296376965</updated>
+    </task>
+    <task id="LOCAL-00036" summary="update date updated">
+      <option name="closed" value="true" />
+      <created>1777296405358</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1777296405358</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,8 +386,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created uranium class and added a system to create two new Neutron objects" />
-    <MESSAGE value="created shapes.py" />
     <MESSAGE value="added clarity in class and function documentation" />
     <MESSAGE value="added documentation" />
     <MESSAGE value="made Point class" />
@@ -399,6 +409,8 @@
     <MESSAGE value="added plotting function and simmulation of 7 generations (random point is generation 1)" />
     <MESSAGE value="added beam and sphere overlay to sim" />
     <MESSAGE value="shifted gen1 to gen0" />
-    <option name="LAST_COMMIT_MESSAGE" value="shifted gen1 to gen0" />
+    <MESSAGE value="optimized using pylint and pycodestyle" />
+    <MESSAGE value="update date updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="update date updated" />
   </component>
 </project>
