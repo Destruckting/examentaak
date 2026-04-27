@@ -225,11 +225,17 @@ class Simulator:
     def visual_simulation(self):
         """plotting simulated points in 3d"""
         # preparing the simulated points for every generation
-        gen1 = self.randomstart()
-        gen2 = []
-        uranium1=Uranium(gen1.x,gen1.y,gen1.z)
+        gen0 = self.randomstart()
+        gen1 = []
+        uranium1=Uranium(gen0.x, gen0.y, gen0.z)
         for _,neutron in enumerate(uranium1.fission()):
-            gen2.append(neutron)
+            gen1.append(neutron)
+        gen2 = []
+        for _,particle in enumerate(gen1):
+            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
+                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
+                for _,neutron in enumerate(uranium.fission()):
+                    gen2.append(neutron)
         gen3 = []
         for _,particle in enumerate(gen2):
             if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
@@ -242,7 +248,7 @@ class Simulator:
                 uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
                 for _,neutron in enumerate(uranium.fission()):
                     gen4.append(neutron)
-        gen5 = []
+        gen5=[]
         for _,particle in enumerate(gen4):
             if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
                 uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
@@ -254,34 +260,28 @@ class Simulator:
                 uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
                 for _,neutron in enumerate(uranium.fission()):
                     gen6.append(neutron)
-        gen7=[]
-        for _,particle in enumerate(gen6):
-            if self.in_object(particle.endpoint().x, particle.endpoint().y, particle.endpoint().z):
-                uranium = Uranium(particle.endpoint().x , particle.endpoint().y, particle.endpoint().z)
-                for _,neutron in enumerate(uranium.fission()):
-                    gen7.append(neutron)
         # building figure
         self.ax.set_aspect('equal')
+        # gen0
+        self.ax.scatter(gen0.x, gen0.y, gen0.z, marker='.', color='black')
         # gen1
-        self.ax.scatter(gen1.x, gen1.y, gen1.z, marker='.', color='black')
+        if not gen1 == []:
+            self.plot_function(gen1, '.', '#095324', '#681D2A')
         # gen2
         if not gen2 == []:
-            self.plot_function(gen2, '.', '#095324', '#681D2A')
+            self.plot_function(gen2, '.', '#096A26', '#7D1A29')
         # gen3
         if not gen3 == []:
-            self.plot_function(gen3, '.', '#096A26', '#7D1A29')
+            self.plot_function(gen3, '.', '#088223', '#941624')
         # gen4
         if not gen4 == []:
-            self.plot_function(gen4, '.', '#088223', '#941624')
+            self.plot_function(gen4, '.', '#079C1C', '#AC101C')
         # gen5
         if not gen5 == []:
-            self.plot_function(gen5, '.', '#079C1C', '#AC101C')
+            self.plot_function(gen5, '.', '#04B611', '#C60910')
         # gen6
         if not gen6 == []:
-            self.plot_function(gen6, '.', '#04B611', '#C60910')
-        # gen7
-        if not gen7 == []:
-            self.plot_function(gen7, '.', '#00D100', '#E10000')
+            self.plot_function(gen6, '.', '#00D100', '#E10000')
 
 
 class BeamSim(Simulator):
