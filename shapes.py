@@ -6,7 +6,6 @@ last updated: 27/04/2026
 
 from collections import namedtuple
 from math import sqrt
-
 from matplotlib.patches import Circle
 from mpl_toolkits.mplot3d import art3d
 from termcolor import colored
@@ -540,5 +539,6 @@ if __name__ == '__main__':
     testsim.visual_simulation()
     testsphere.visual_simulation()
     Simulator(1, 100, Point(0, 0, 0)).visual_simulation()
-    plt.show()
+    plt.show(block=False)
+    plt.close('all')
     # be sure to put any simulations you don't want to plot after plt.show
