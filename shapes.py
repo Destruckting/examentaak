@@ -1,7 +1,7 @@
 """
 shapes and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 27/04/2026
+last updated: 28/04/2026
 """
 
 from collections import namedtuple
@@ -539,6 +539,6 @@ if __name__ == '__main__':
     testsim.visual_simulation()
     testsphere.visual_simulation()
     Simulator(1, 100, Point(0, 0, 0)).visual_simulation()
-    plt.show(block=False)
-    plt.close('all')
+    plt.show()
+
     # be sure to put any simulations you don't want to plot after plt.show
