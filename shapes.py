@@ -360,8 +360,8 @@ class BeamSim(Simulator):
     def __str__(self):
         return (f'Beam simulation: does {self.amount} simulations around'
                 f' point {self.center} for a mass of {self.mass} and'
-                f' dimensions: width={self.a}, height={self.a} and'
-                f' depth={self.b}')
+                f' dimensions: width={self.a: 1.5f}, height={self.a: 1.5f} and'
+                f' depth={self.b: 1.5f}')
 
     def randomstart(self) -> tuple:
         """ starting point randomizer"""
@@ -484,7 +484,7 @@ class SphereSim(Simulator):
     def __str__(self):
         return (f'Sphere simulation: does {self.amount}'
                 f' simulations around point {self.center} for a mass of'
-                f' {self.mass} and a radius of {self.radius}.')
+                f' {self.mass} and a radius of {self.radius: 1.5f}.')
 
     def randomstart(self) -> tuple:
         """start position randomizer"""
