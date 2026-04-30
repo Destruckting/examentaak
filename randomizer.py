@@ -1,7 +1,7 @@
 """
-randomizer of theta, phi and distance for fission simulation
+randomizer of theta, phi and distance for fission simulation (testing file)
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last update: 31/03/2026
+last update: 30/04/2026
 """
 import numpy as np
 from matplotlib import pyplot as plt
@@ -54,7 +54,7 @@ class Randomizer:
     def randomtheta(self):
         """randomizing theta"""
         randkey_theta=np.random.default_rng()
-        randnum_theta=randkey_theta.uniform(-1, 1)
+        randnum_theta=randkey_theta.uniform(-0.5, 0.5)
         randval_theta=np.arccos((randnum_theta))
         return float(randval_theta)
     def randomdistance(self):

@@ -1,7 +1,7 @@
 """
 shapes and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 28/04/2026
+last updated: 30/04/2026
 """
 
 from collections import namedtuple
@@ -319,10 +319,9 @@ class Simulator:
 
 class BeamSim(Simulator):
     """simulates beam of uranium"""
-    def __init__(self, mass: float, scale: float, amount_of_points=100,
-                 center=Point(0, 0, 0)):
+    def __init__(self, mass: float, scale: float, amount_of_points=100):
         """init beam simmulator class"""
-        super().__init__(mass, amount_of_points, center)
+        super().__init__(mass, amount_of_points)
         self.scale = scale
         self._a = (self.mass*self.scale)**(1/3)
         self._b = (self.mass/(self.scale**2))**(1/3)
@@ -458,9 +457,8 @@ class BeamSim(Simulator):
 
 class SphereSim(Simulator):
     """simulates sphere of uranium"""
-    def __init__(self, mass: float, amount_of_points=100,
-                 center=Point(0, 0, 0)):
-        super().__init__(mass, amount_of_points, center)
+    def __init__(self, mass: float, amount_of_points=100):
+        super().__init__(mass, amount_of_points)
         self.radius = float(np.cbrt(3*self.mass/(4*np.pi)))
 
     @property
