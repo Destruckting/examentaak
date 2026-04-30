@@ -90,10 +90,37 @@ if __name__ == '__main__':
     print('\nIn the next section, we will show how these methods work.')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
+    # examples of sphere and beam
     print('We will first showcase the simulation of the sphere. '
           'This simulation takes the same input arguments as'
-          ' the parent class')
-    print(colored(''))
+          ' the parent class.')
+    print(colored('SphereSim','green')+'('+colored('mass','blue')+
+          ', '+colored('amount of points','blue')+')')
+    sphereshowcase=SphereSim(1, 100)
+    print(sphereshowcase)
+    print('\nWe then get the survivor fraction:')
+    print(sphereshowcase.surviror_fraction())
+    print('\nFor the plot we get the following result:')
+    print('(Please note that the success of the simulation '
+          'will vary every time this program is ran.)')
+    input(colored("Press enter to show plot...", 'yellow', attrs=['bold']))
+    sphereshowcase.visual_simulation()
+    plt.show()
+    print('\nThe simulation of the beam works the same, '
+          'with an added input argument: \na scale factor that determines '
+          'the relation between the depth and the width and height.')
+    print(colored('SphereSim', 'green') + '(' + colored('mass', 'blue') +
+          ', ' + colored('scale','blue') + ', ' +
+          colored('amount of points', 'blue') + ')')
+    beamshowcase = BeamSim(1, 1.5, 100)
+    print(beamshowcase)
+    print('\nWe then get the survivor fraction:')
+    print(beamshowcase.surviror_fraction())
+    print('\nFor the plot we get the following result:')
+    input(colored("Press enter to show plot...", 'yellow', attrs=['bold']))
+    beamshowcase.visual_simulation()
+    plt.show()
+    print('\nNow that we know how the program works, we can start with the tasks')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
     # first task
@@ -109,23 +136,31 @@ if __name__ == '__main__':
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     close_all()
     print("\nWe see that the critical mass is somewhere around 1.5 "
-          "if we do these simulations multiple times. "
+          "if we do these simulations multiple times.\n"
           "We will now take a smaller step to get closer to "
           "a survivor fraction of 1."
           "\nWe will also set the amount of simmulated points to"
-          " 500 for a more precise estimate.\n")
+          " 1000 for a more precise estimate.\n")
     body=[]
-    for i in [1.45, 1.46, 1.47, 1.48, 1.49, 1.5,1.51,1.52,1.53,1.54,1.55]:
-        simobject2 = BeamSim(i, 1, 500)
+    for i in [1.45, 1.46, 1.47, 1.48, 1.49, 1.5,
+              1.51, 1.52, 1.53, 1.54, 1.55]:
+        simobject2 = BeamSim(i, 1, 1000)
         body.append([i, simobject2.surviror_fraction().fraction])
-
     print(tab.tabulate(body, headers=header, tablefmt="grid"))
     print('\nIf we run these simulations a couple of times,'
-          ' we see that the value fluctuates.'
-          ' We therefore conclude that the critical mass is 1.5,'
+          ' we see that the value fluctuates.\n'
+          'We therefore conclude that the critical mass is 1.5,'
           ' with an error margin of 0.3. ')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     close_all()
+    print('We can then do a last refinement in this region: (note that this may take a bit longer as we are simulating 10000 points)')
+    lastone=[]
+    for i in [1.47, 1.48, 1.49, 1.5, 1.51, 1.52, 1.53]:
+        simobject3 = BeamSim(i, 1, 10000)
+        lastone.append([i, simobject3.surviror_fraction().fraction])
+    print(tab.tabulate(lastone, headers=header, tablefmt="grid"))
+    print('\nThis confirms our error margin, thus we can say that our estimate is valid.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
     # second task
 
