@@ -65,14 +65,14 @@ class Point:
         """str method"""
         return f'(x={self.x}, y={self.y}, z={self.z})'
 
-    def __add__(self, other) -> Point:
+    def __add__(self, other):
         """Adding two points"""
         if not isinstance(other, Point):
             raise TypeError(colored('Second point must be an instance'
                                     ' of Point', 'red'))
         return Point(self.x+other.x, self.y+other.y, self.z+other.z)
 
-    def __sub__(self, other) -> Point:
+    def __sub__(self, other):
         """Subtracting two points"""
         if not isinstance(other, Point):
             raise TypeError(colored('Second point must be an instance'
@@ -88,6 +88,8 @@ class Point:
             'sphere_coord', 'dist theta phi')
         sphere = sph(dist, theta, phi)
         return sphere
+# Point class was added for more general applications,  but is unnecessary.
+# It was therefore removed as direct input option.
 
 
 class Simulator:

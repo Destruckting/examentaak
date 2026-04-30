@@ -19,6 +19,7 @@ def close_all():
 
 if __name__ == '__main__':
     print("\033[H\033[2J", end="")
+    # initial welcome and layout test file
     print('\nWelcome to the critical mass simulation. \n')
     print('To continue the program when a plot pops up,'
           ' simply '+colored('close the plot','yellow')+
@@ -29,6 +30,7 @@ if __name__ == '__main__':
           'before doing the actual simulations.')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
+    # Particles
     print("The first two classes we will introduce are the "+
           colored('Neutron','green')+' class and '+
           colored('Uranium','green')+' class.')
@@ -41,9 +43,9 @@ if __name__ == '__main__':
           'to calculate the endpoint of the neutron.')
     neutron=Neutron(0, 0, 0)
     print('A neutron that starts at coordinates (0,0,0) for example,'
-          ' has endpoint: '+f'({neutron.endpoint().x},'
-                            f'{neutron.endpoint().y},'
-                            f'{neutron.endpoint().z})\n')
+          ' has endpoint: '+f'({neutron.endpoint().x: 1.5f}, '
+                            f'{neutron.endpoint().y: 1.5f}, '
+                            f'{neutron.endpoint().z: 1.5f})\n')
     print('The '+colored('Uranium','green')+
           ' class also takes coordinates as input, and generates two '+
           colored('Neutron','green')+
@@ -57,32 +59,51 @@ if __name__ == '__main__':
     print(tab.tabulate(body, headers=headlineuranium, tablefmt="grid"))
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
+    # Simulators
     print('The other classes we made are the '+colored('Simulator','green')+
           ' parent class with its subclasses.')
     print('These classes are made with inheritance in mind.'
-          ' We will thus explain the Simulator class and mention'
+          ' \nWe will thus explain the Simulator class and mention'
           ' only the added features for the subclasses.')
     print('\nThe '+colored('Simulator','green')+
           ' class supports the two main methods of the simulation: '
           'calculating the '+colored('survivor fraction','green')+
-          ' and the '+colored('visual simulation'+'green')+
+          ' and the '+colored('visual simulation','green')+
           '. \nIt also provides a general input protection.')
     print('\nThe '+colored('survivor_fraction()','green')+
           ' method determines the survivor fraction by simulating '+
           colored('N','blue')+
           ' starting points as input for the '+colored('Uranium','green')+
-          ' class. The function then evaluates whether these points'
-          ' are still inside the volume. The amount of points that are still'
-          ' inside the volume compared to the amount of starting points is the \nsurvivor fraction.')
+          ' class. \nThe function then evaluates whether these points'
+          ' are still inside the volume. \nThe amount of points that are '
+          'still inside the volume compared to the amount of starting points'
+          ' is the survivor fraction.')
+    print('\nThe '+colored('visual_simulation()','green')+
+          ' method uses a random starting point as zeroth generation. '
+          '\nIt then calculates up to seven generations (maximum 128 points) of fission '
+          'and plots the point on a 3D matplotlib plot.')
+    print('\nThe '+colored('Simulator','green')+' class has two subclasses: '+
+          colored('BeamSim','green')+' and '+colored('SphereSim','green'))
+    print('These use the functions from the parent class with added'
+          ' restraints for the checks, startpoint generation and'
+          ' they also add a visualization of the shape on the plot.')
+    print('\nIn the next section, we will show how these methods work.')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
+    print('We will first showcase the simulation of the sphere. '
+          'This simulation takes the same input arguments as'
+          ' the parent class')
+    print(colored(''))
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    print("\033[H\033[2J", end="")
+    # first task
     print(colored('First task: finding the critical mass'
                   ' of a square.',attrs=['bold'])+ '\n')
     print('First, we will estimate the mass using big steps')
     header=["Mass", "Survivor fraction"]
     table=[]
     for i in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]:
-        simobject=BeamSim(i, 1, 100, Point(0,0,0))
+        simobject=BeamSim(i, 1, 100)
         table.append([i,simobject.surviror_fraction().fraction])
     print(tab.tabulate(table, headers=header, tablefmt="grid"))
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
@@ -95,7 +116,7 @@ if __name__ == '__main__':
           " 500 for a more precise estimate.\n")
     body=[]
     for i in [1.45, 1.46, 1.47, 1.48, 1.49, 1.5,1.51,1.52,1.53,1.54,1.55]:
-        simobject2 = BeamSim(i, 1, 500, Point(0, 0, 0))
+        simobject2 = BeamSim(i, 1, 500)
         body.append([i, simobject2.surviror_fraction().fraction])
 
     print(tab.tabulate(body, headers=header, tablefmt="grid"))
@@ -106,4 +127,5 @@ if __name__ == '__main__':
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     close_all()
     print("\033[H\033[2J", end="")
+    # second task
 
