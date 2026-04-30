@@ -92,11 +92,10 @@ class Point:
 
 class Simulator:
     """shapes parent class"""
-    def __init__(self, mass: float, amount_of_points=100,
-                 center=Point(0, 0, 0)):
+    def __init__(self, mass: float, amount_of_points=100):
         """init shapes class"""
         self.amount = amount_of_points
-        self.center = center
+        self.center = Point(0, 0, 0)
         self.mass = mass
         self._fig = plt.figure()
         self._ax = self.fig.add_subplot(111, projection='3d')
@@ -530,15 +529,15 @@ class SphereSim(Simulator):
 
 if __name__ == '__main__':
 
-    testsim = BeamSim(1, 1, 100, Point(0, 0, 0))
+    testsim = BeamSim(1, 1, 100)
     print(testsim)
     print(testsim.surviror_fraction())
-    testsphere = SphereSim(1, 100, Point(0, 0, 0))
+    testsphere = SphereSim(1, 100)
     print(testsphere)
     print(testsphere.surviror_fraction())
     testsim.visual_simulation()
     testsphere.visual_simulation()
-    Simulator(1, 100, Point(0, 0, 0)).visual_simulation()
+    Simulator(1, 100).visual_simulation()
     plt.show()
 
     # be sure to put any simulations you don't want to plot after plt.show
