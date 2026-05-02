@@ -1,13 +1,13 @@
 """
 testing file
 Dylan Assinner (dylan.assinner@student.uatwerpen.be)
-last updated: 27/04/2026
+last updated: 2/05/2026
 """
 
 import matplotlib.pyplot as plt
 from termcolor import colored
 import tabulate as tab
-from shapes import Point, SphereSim, BeamSim, Simulator
+from shapes import SphereSim, BeamSim
 from particle import Neutron, Uranium
 
 def close_all():
@@ -21,8 +21,8 @@ if __name__ == '__main__':
     print("\033[H\033[2J", end="")
     # initial welcome and layout test file
     print('\nWelcome to the critical mass simulation. \n')
-    print('To continue the program when a plot pops up,'
-          ' simply '+colored('close the plot','yellow')+
+    print('To continue the program when a plot pops up, '
+          +colored('close the plot','yellow')+
           '. At times multiple plot windows may open and close rapidly.\n'
           'This is for memory management, as the plot window is an'
           ' inherent attribute of the simulator classes.')
@@ -125,7 +125,7 @@ if __name__ == '__main__':
     print("\033[H\033[2J", end="")
     # first task
     print(colored('First task: finding the critical mass'
-                  ' of a square.',attrs=['bold'])+ '\n')
+                  ' of a cube.',attrs=['bold'])+ '\n')
     print('First, we will estimate the mass using big steps')
     header=["Mass", "Survivor fraction"]
     table=[]
@@ -163,4 +163,106 @@ if __name__ == '__main__':
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     print("\033[H\033[2J", end="")
     # second task
+    print(colored('Second task: finding the critical mass of a beam with scale 1.5 and 0.5.', attrs=['bold']))
+    print('\nWe will do the same calculations as the previous task.')
+    print('First, the beam with scale 1.5:')
+    table = []
+    for i in [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]:
+        simobject = BeamSim(i, 1.5, 100)
+        table.append([i, simobject.surviror_fraction().fraction])
+    print(tab.tabulate(table, headers=header, tablefmt="grid"))
+    print('We see that the critical mass should be somewhere around 1. \nWe will take a smaller step to define an error margin, using 1000 points for the simmulation.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    body = []
+    for i in [0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3,]:
+        simobject2 = BeamSim(i, 1.5, 1000)
+        body.append([i, simobject2.surviror_fraction().fraction])
+    print(tab.tabulate(body, headers=header, tablefmt="grid"))
+    print('\nWe see that our guess of 1 is quite accurate. We will try to get a more accurate error margin.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    lastone=[]
+    for i in [0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2]:
+        simobject3 = BeamSim(i, 1.5, 10000)
+        lastone.append([i, simobject3.surviror_fraction().fraction])
+    print(tab.tabulate(lastone, headers=header, tablefmt="grid"))
+    print('\nWe see that our guess of 1 with an error margin of 0.2 was accurate enough.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    print("\033[H\033[2J", end="")
+    print('Now that we know the critical mass of the scale factor 1.5, we will also try a scale of 0.5.')
+    print('Because the critical mass for a scale of 1.5 was slightly lower than the mass for a scale of 1 (cube), we expect the critical mass of scale 0.5 to be slightly higher.')
+    table = []
+    for i in [ 1, 1.5, 2, 2.5, 3]:
+        simobject = BeamSim(i, 0.5, 100)
+        table.append([i, simobject.surviror_fraction().fraction])
+    print(tab.tabulate(table, headers=header, tablefmt="grid"))
+    print('\nWe see that the critical mass is unexpectedly low. we will use slightly more acurate values of 1000 points to hopefully get a better estimate.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    body = []
+    for i in [1, 10, 20 ,50, 100, 200, 500, 1000]:
+        simobject2 = BeamSim(i, 0.5, 1000)
+        body.append([i, simobject2.surviror_fraction().fraction])
+    print(tab.tabulate(body, headers=header, tablefmt="grid"))
+    print("We see that the value never quite reaches 1, even for a mass of 1000, so we conclude that for some reason this system doesn't work if the scale gets too small. ")
+    print('To verify our suspicion, we will also do a less acurate simulation of a scale of 2 and 0.9')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    print("\033[H\033[2J", end="")
+    print('For a scale of 2, we get the following critical mass:')
+    table = []
+    for i in [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]:
+        simobject = BeamSim(i, 2, 100)
+        table.append([i, simobject.surviror_fraction().fraction])
+    print(tab.tabulate(table, headers=header, tablefmt="grid"))
+    print('We see that the critical massis somewhere around 0.5.')
+    body = []
+    for i in [0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8]:
+        simobject2 = BeamSim(i, 2, 1000)
+        body.append([i, simobject2.surviror_fraction().fraction])
+    print(tab.tabulate(body, headers=header, tablefmt="grid"))
+    input(colored('\nPress enter to continue...', 'yellow', attrs=['bold']))
+    close_all()
+    print("\033[H\033[2J", end="")
+    print('For the scale of 0.9, we will look if this shows the same behavior as 0.5')
+    body = []
+    for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+        simobject2 = BeamSim(i, 0.9, 1000)
+        body.append([i, simobject2.surviror_fraction().fraction])
+    print(tab.tabulate(body, headers=header, tablefmt="grid"))
+    print('Because a scale of 0.9 becomes critical at a mass of around 3, we can conclude that the needed critical mass grows exponentially for smaller scale factors.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    print("\033[H\033[2J", end="")
+    # third task
+    print(colored('Third task: determining the critical mass of a sphere ',attrs=['bold']))
+    print('For this task, we can reuse the code from the first task, but now with the '+colored('SphereSim','green')+' class.')
+    spheretab1=[]
+    for i in [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]:
+        sphereobject=SphereSim(i,100)
+        spheretab1.append([i, sphereobject.surviror_fraction().fraction])
+    print(tab.tabulate(spheretab1, headers=header, tablefmt="grid"))
+    print('\nBy redoing this simulation multiple times, we can see that the critical mass is somewhere between 0.75 and 1.25.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    spheretab2=[]
+    for i in [0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25]:
+        sphereobject2=SphereSim(i, 1000)
+        spheretab2.append([i, sphereobject2.surviror_fraction().fraction])
+    print(tab.tabulate(spheretab2, headers=header, tablefmt="grid"))
+    print('We see that the critical mass fluctuates between 0.75 and 1. We will thus take a closer look at this section for our final estimate.')
+    input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
+    close_all()
+    spheretab3=[]
+    for i in [0.75, 0.775, 0.8, 0.825, 0.85, 0.875, 0.9, 0.925, 0.95, 0.975, 1]:
+        sphereobject3=SphereSim(i,10000)
+        spheretab3.append([i, sphereobject3.surviror_fraction().fraction])
+    print(tab.tabulate(spheretab3, headers=header, tablefmt="grid"))
+    print('We will conclude that  this range (0.875 plus/minus 0.125) is the critical mass.')
+    input(colored("\nPress enter to close program...", 'yellow', attrs=['bold']))
+    close_all()
+    print('\033[H\033[2J', end="")
+    print('Thank you for using this program, goodbye!')
 
