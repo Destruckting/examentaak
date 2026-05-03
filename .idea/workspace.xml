@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="completed first task">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="finished test.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,7 +407,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777577584689</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="finished test.py">
+      <option name="closed" value="true" />
+      <created>1777734412830</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1777734412830</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed parenthesis" />
     <MESSAGE value="made __add__ and __sub__" />
     <MESSAGE value="some small changes" />
     <MESSAGE value="made convertor to spherical coordinates" />
@@ -463,6 +469,7 @@
     <MESSAGE value="small updates" />
     <MESSAGE value="update" />
     <MESSAGE value="completed first task" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed first task" />
+    <MESSAGE value="finished test.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished test.py" />
   </component>
 </project>

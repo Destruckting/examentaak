@@ -1,0 +1,138 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{arydshln}
+\usepackage{subcaption}
+\usepackage[autostyle]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{xstring}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\newcommand{\ohm}{\Omega}
+\tikzset{vmeter/.style={rmeterwa, t=V}}
+\tikzset{ameter/.style={rmeterwa, t=A}}
+\tikzset{ometer/.style={rmeterwa, t=$\Omega$}}
+
+\setlength\parindent{0pt}
+\newcommand{{\supcite}}[1]{\textsuperscript{\cite{#1}}}
+
+\usepackage{tcolorbox}
+\usepackage{varwidth}
+\tcbuselibrary{theorems, skins, hooks, breakable, listings}
+%formules
+\newtcbtheorem[number within=chapter]{theorie}{Theorie}
+{theorem style=plain,enhanced,colframe=black,colback=black!3!white,
+coltitle=black,fonttitle=\upshape\bfseries,fontupper=\slshape,
+drop fuzzy shadow=black!50!white,boxrule=0.4pt}{theo}
+\newtcbtheorem[number within=section]{afl}{Afleiding}
+{breakable, theorem style=plain,enhanced,colframe=black,colback=black!3!white,
+coltitle=black,fonttitle=\upshape\bfseries,fontupper=\slshape,
+drop fuzzy shadow=black!50!white,boxrule=0.4pt}{afl}
+
+%formules experimentele fysica
+\newcommand{\prop}{\[s_{<f>}=\sqrt{\sum_{i=1}^N\left(\dfrac{\partial f}{\partial x_i}\right)^2\cdot S_{<x_i>}^2}
+\]}
+
+\newcommand{\ggem}{\begin{align*}
+    \left\langle x\right\rangle_g &=\frac{\sum\limits_{i=1}^N\frac{x_i}{{s_{i}}^2}}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}} \\
+     \\
+    s_{\left\langle x\right\rangle_g}&=\sqrt{\frac{1}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}}}    
+    \end{align*}}
+
+\newcommand{\gem}{\begin{align*}
+\left\langle x\right\rangle&=\frac{\sum\limits_{i=1}^Nx_i}{N} \\
+\\
+s_{\left\langle x\right\rangle}&=\sqrt{\frac{\sum\limits_{i=1}^N\left( x_i-\left\langle x\right\rangle\right)^2}{N\left( N-1\right)}} \\
+\end{align*}}
+
+
+%voor gemakkelijker propagatieformules in te vullen
+\newcommand{\partfrac}[2]{
+\frac{\partial #1}{\partial #2}
+}
+
+%grote blokken text als comment zetten
+\usepackage{comment}
+
+%toelaten aanpassen nummering van enumerate
+\usepackage{enumitem}
+
+\usepackage{array}
+\usepackage{tabulary}
+%meer controle over tabular
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage{xfrac}
+
+\usepackage{multirow}
+
+% color def
+\usepackage{color}
+\definecolor{darkred}{rgb}{0.6,0.0,0.0}
+\definecolor{darkgreen}{rgb}{0,0.50,0}
+\definecolor{lightblue}{rgb}{0.0,0.42,0.91}
+\definecolor{orange}{rgb}{0.99,0.48,0.13}
+\definecolor{grass}{rgb}{0.18,0.80,0.18}
+\definecolor{pink}{rgb}{0.97,0.15,0.45}
+
+% listings
+\usepackage{listings}
+
+% General Setting of listings
+\lstset{
+  aboveskip=1em,
+  breaklines=True,
+  showstringspaces=false,
+  abovecaptionskip=-6pt,
+  captionpos=b,
+  escapeinside={\%*}{*)},
+  frame=single,
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+}
+% 0. Basic Color Theme
+\lstdefinestyle{colored}{ %
+  basicstyle=\ttfamily,
+  backgroundcolor=\color{white},
+  commentstyle=\color{green}\itshape,
+  keywordstyle=\color{blue}\bfseries\itshape,
+  stringstyle=\color{red},
+}
+% 1. General Python Keywords List
+\lstdefinelanguage{PythonPlus}[]{Python}{
+  morekeywords=[1]{,as,assert,nonlocal,with,yield,self,True,False,None,} % Python builtin
+  morekeywords=[2]{,__init__,__add__,__mul__,__div__,__sub__,__call__,__getitem__,__setitem__,__eq__,__ne__,__nonzero__,__rmul__,__radd__,__repr__,__str__,__get__,__truediv__,__pow__,__name__,__future__,__all__,}, % magic methods
+  morekeywords=[3]{,object,type,isinstance,copy,deepcopy,zip,enumerate,reversed,list,set,len,dict,tuple,range,xrange,append,execfile,real,imag,reduce,str,repr,}, % common functions
+  morekeywords=[4]{,Exception,NameError,IndexError,SyntaxError,TypeError,ValueError,OverflowError,ZeroDivisionError,}, % errors
+  morekeywords=[5]{,ode,fsolve,sqrt,exp,sin,cos,arctan,arctan2,arccos,pi, array,norm,solve,dot,arange,isscalar,max,sum,flatten,shape,reshape,find,any,all,abs,plot,linspace,legend,quad,polyval,polyfit,hstack,concatenate,vstack,column_stack,empty,zeros,ones,rand,vander,grid,pcolor,eig,eigs,eigvals,svd,qr,tan,det,logspace,roll,min,mean,cumsum,cumprod,diff,vectorize,lstsq,cla,eye,xlabel,ylabel,squeeze,}, % numpy / math
+}
+% 2. New Language based on Python
+\lstdefinelanguage{PyBrIM}[]{PythonPlus}{
+  emph={d,E,a,Fc28,Fy,Fu,D,des,supplier,Material,Rectangle,PyElmt},
+}
+% 3. Extended theme
+\lstdefinestyle{colorEX}{
+  basicstyle=\ttfamily,
+  backgroundcolor=\color{white},
+  commentstyle=\color{darkgreen}\slshape,
+  keywordstyle=\color{blue}\bfseries\slshape,
+  keywordstyle=[2]\color{blue}\bfseries,
+  keywordstyle=[3]\color{grass},
+  keywordstyle=[4]\color{red},
+  keywordstyle=[5]\color{orange},
+  stringstyle=\color{darkred},
+  emphstyle=\color{pink}\underbar,
+}
