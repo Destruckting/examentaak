@@ -102,7 +102,7 @@ if __name__ == '__main__':
     print(sphereshowcase.surviror_fraction())
     print('\nFor the plot we get the following result:')
     print('(Please note that the success of the simulation '
-          'will vary every time this program is ran.)')
+          'will vary every time this program is executed.)')
     input(colored("Press enter to show plot...", 'yellow', attrs=['bold']))
     sphereshowcase.visual_simulation()
     plt.show()
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     # first task
     print(colored('First task: finding the critical mass'
                   ' of a cube.',attrs=['bold'])+ '\n')
-    print('First, we will estimate the mass using big steps')
+    print('First, we will estimate the mass using relatively large intervals.')
     header=["Mass", "Survivor fraction"]
     table=[]
     for i in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]:
@@ -137,9 +137,9 @@ if __name__ == '__main__':
     close_all()
     print("\nWe see that the critical mass is somewhere around 1.5 "
           "if we do these simulations multiple times.\n"
-          "We will now take a smaller step to get closer to "
+          "We will now use smaller intervals to get closer to "
           "a survivor fraction of 1."
-          "\nWe will also set the amount of simmulated points to"
+          "\nWe will also set the amount of simulated points to"
           " 1000 for a more precise estimate.\n")
     body=[]
     for i in [1.45, 1.46, 1.47, 1.48, 1.49, 1.5,
@@ -171,7 +171,7 @@ if __name__ == '__main__':
         simobject = BeamSim(i, 1.5, 100)
         table.append([i, simobject.surviror_fraction().fraction])
     print(tab.tabulate(table, headers=header, tablefmt="grid"))
-    print('We see that the critical mass should be somewhere around 1. \nWe will take a smaller step to define an error margin, using 1000 points for the simmulation.')
+    print('We see that the critical mass should be somewhere around 1. \nWe will use a smaller interval to define an error margin, using 1000 points for the simulation.')
     input(colored("\nPress enter to continue...", 'yellow', attrs=['bold']))
     close_all()
     body = []
@@ -217,7 +217,7 @@ if __name__ == '__main__':
         simobject = BeamSim(i, 2, 100)
         table.append([i, simobject.surviror_fraction().fraction])
     print(tab.tabulate(table, headers=header, tablefmt="grid"))
-    print('We see that the critical massis somewhere around 0.5.')
+    print('We see that the critical mass is somewhere around 0.5.')
     body = []
     for i in [0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8]:
         simobject2 = BeamSim(i, 2, 1000)
@@ -226,7 +226,7 @@ if __name__ == '__main__':
     input(colored('\nPress enter to continue...', 'yellow', attrs=['bold']))
     close_all()
     print("\033[H\033[2J", end="")
-    print('For the scale of 0.9, we will look if this shows the same behavior as 0.5')
+    print('For the scale of 0.9, we will verify if this shows the same behavior as 0.5')
     body = []
     for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
         simobject2 = BeamSim(i, 0.9, 1000)
