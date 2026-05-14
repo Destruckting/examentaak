@@ -25,3 +25,12 @@ Using a randomizer to generate random uniformly distributed points, we can calcu
 		z_1=z_0+d\;\cos\theta
 	\end{cases}
 \end{displaymath}
+Here, $d$ is the distance the neutron travels and $\theta$ and $\phi$ are the angles of spherical coordinates. We will need to randomize these three variables.
+
+$d$ Is a random variable between 1 and 0. $\phi$ Is a random variable between $2\pi$ and 0. Both of these variables are uniformly distributed.
+
+$\theta$ is a bit trickier, for $\cos\theta$ is the uniformly distributed variable. We will thus have to randomize a value between $-1$ and $1$ and use the $\arccos$ function to  calculate the angle $\theta$.
+\subsection{mass distribution}
+For the mass distribution, we have to take into account that we have two possible shapes to simulate: a beam (or cube) and a sphere.
+\subsubsection{beam}
+For the 
