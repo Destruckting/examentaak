@@ -1,7 +1,7 @@
 """
 shapes and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 30/04/2026
+last updated: 14/05/2026
 """
 
 from collections import namedtuple
@@ -101,6 +101,13 @@ class Simulator:
         self.mass = mass
         self._fig = plt.figure()
         self._ax = self.fig.add_subplot(111, projection='3d')
+        # we make plt.figure() and fig.add_subplot an inherent attribute
+        # of the simulator class for easier implementation of the
+        # private plot_function class and the plotting of the circles for the
+        # SphereSim subclass
+        self.ax.set_xlabel('x') # displays x next to x-axis
+        self.ax.set_ylabel('y') # displays x next to x-axis
+        self.ax.set_zlabel('z') # displays x next to x-axis
 
     @property
     def amount(self):
