@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 15:18
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 16:12
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -201,9 +201,296 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language74). Reported on input line 108.
 ))
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks19
+) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count282
+) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count283
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count284
+\c@listtotal=\count285
+\c@listcount=\count286
+\c@liststart=\count287
+\c@liststop=\count288
+\c@citecount=\count289
+\c@citetotal=\count290
+\c@multicitecount=\count291
+\c@multicitetotal=\count292
+\c@instcount=\count293
+\c@maxnames=\count294
+\c@minnames=\count295
+\c@maxitems=\count296
+\c@minitems=\count297
+\c@citecounter=\count298
+\c@maxcitecounter=\count299
+\c@savedcitecounter=\count300
+\c@uniquelist=\count301
+\c@uniquename=\count302
+\c@refsection=\count303
+\c@refsegment=\count304
+\c@maxextratitle=\count305
+\c@maxextratitleyear=\count306
+\c@maxextraname=\count307
+\c@maxextradate=\count308
+\c@maxextraalpha=\count309
+\c@abbrvpenalty=\count310
+\c@highnamepenalty=\count311
+\c@lownamepenalty=\count312
+\c@maxparens=\count313
+\c@parenlevel=\count314
+\blx@tempcnta=\count315
+\blx@tempcntb=\count316
+\blx@tempcntc=\count317
+\c@blx@maxsection=\count318
+\blx@maxsegment@0=\count319
+\blx@notetype=\count320
+\blx@parenlevel@text=\count321
+\blx@parenlevel@foot=\count322
+\blx@sectionciteorder@0=\count323
+\blx@sectionciteorderinternal@0=\count324
+\blx@entrysetcounter=\count325
+\blx@biblioinstance=\count326
+\labelnumberwidth=\skip51
+\labelalphawidth=\skip52
+\biblabelsep=\skip53
+\bibitemsep=\skip54
+\bibnamesep=\skip55
+\bibinitsep=\skip56
+\bibparsep=\skip57
+\bibhang=\skip58
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language80
+\c@mincomprange=\count327
+\c@maxcomprange=\count328
+\c@mincompwidth=\count329
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count330
+\c@savedafterword=\count331
+\c@annotator=\count332
+\c@savedannotator=\count333
+\c@author=\count334
+\c@savedauthor=\count335
+\c@bookauthor=\count336
+\c@savedbookauthor=\count337
+\c@commentator=\count338
+\c@savedcommentator=\count339
+\c@editor=\count340
+\c@savededitor=\count341
+\c@editora=\count342
+\c@savededitora=\count343
+\c@editorb=\count344
+\c@savededitorb=\count345
+\c@editorc=\count346
+\c@savededitorc=\count347
+\c@foreword=\count348
+\c@savedforeword=\count349
+\c@holder=\count350
+\c@savedholder=\count351
+\c@introduction=\count352
+\c@savedintroduction=\count353
+\c@namea=\count354
+\c@savednamea=\count355
+\c@nameb=\count356
+\c@savednameb=\count357
+\c@namec=\count358
+\c@savednamec=\count359
+\c@translator=\count360
+\c@savedtranslator=\count361
+\c@shortauthor=\count362
+\c@savedshortauthor=\count363
+\c@shorteditor=\count364
+\c@savedshorteditor=\count365
+\c@labelname=\count366
+\c@savedlabelname=\count367
+\c@institution=\count368
+\c@savedinstitution=\count369
+\c@lista=\count370
+\c@savedlista=\count371
+\c@listb=\count372
+\c@savedlistb=\count373
+\c@listc=\count374
+\c@savedlistc=\count375
+\c@listd=\count376
+\c@savedlistd=\count377
+\c@liste=\count378
+\c@savedliste=\count379
+\c@listf=\count380
+\c@savedlistf=\count381
+\c@location=\count382
+\c@savedlocation=\count383
+\c@organization=\count384
+\c@savedorganization=\count385
+\c@origlocation=\count386
+\c@savedoriglocation=\count387
+\c@origpublisher=\count388
+\c@savedorigpublisher=\count389
+\c@publisher=\count390
+\c@savedpublisher=\count391
+\c@language=\count392
+\c@savedlanguage=\count393
+\c@origlanguage=\count394
+\c@savedoriglanguage=\count395
+\c@pageref=\count396
+\c@savedpageref=\count397
+\shorthandwidth=\skip59
+\shortjournalwidth=\skip60
+\shortserieswidth=\skip61
+\shorttitlewidth=\skip62
+\shortauthorwidth=\skip63
+\shorteditorwidth=\skip64
+\locallabelnumberwidth=\skip65
+\locallabelalphawidth=\skip66
+\localshorthandwidth=\skip67
+\localshortjournalwidth=\skip68
+\localshortserieswidth=\skip69
+\localshorttitlewidth=\skip70
+\localshortauthorwidth=\skip71
+\localshorteditorwidth=\skip72
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-unicode.de
+f)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count398
+\c@textcitetotal=\count399
+\c@textcitemaxnames=\count400
+\c@biburlbigbreakpenalty=\count401
+\c@biburlbreakpenalty=\count402
+\c@biburlnumpenalty=\count403
+\c@biburlucpenalty=\count404
+\c@biburllcpenalty=\count405
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count406
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/numeric.bb
+x
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/bbx/standard.b
+bx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count407
+\c@bbx:relatedtotal=\count408
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/cbx/numeric.cb
+x
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
+tex.def
+File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count409
+Inserting `l3color' in `luaotfload.parse_color'.))
+Package biblatex Info: ... and expl3
+(biblatex)             2026-01-19 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/blx-case-expl3
+.sty
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/l3packages/xparse/xpars
+e.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+))
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip51
+\@mathmargin=\skip73
 
 For additional information on amsmath, use the `?' option.
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
@@ -211,7 +498,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
+\@emptytoks=\toks21
 \ex@=\dimen149
 ))
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
@@ -221,14 +508,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count282
+\inf@bad=\count410
 LaTeX Info: Redefining \frac on input line 235.
-\uproot@=\count283
-\leftroot@=\count284
+\uproot@=\count411
+\leftroot@=\count412
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count285
-\DOTSCASE@=\count286
+\classnum@=\count413
+\DOTSCASE@=\count414
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -241,31 +528,31 @@ LaTeX Info: Redefining \Bigg on input line 724.
 \big@size=\dimen151
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count287
+\macc@depth=\count415
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count288
-\dotsspace@=\muskip17
-\c@parentequation=\count289
-\dspbrk@lvl=\count290
-\tag@help=\toks20
-\row@=\count291
-\column@=\count292
-\maxfields@=\count293
-\andhelp@=\toks21
+\c@MaxMatrixCols=\count416
+\dotsspace@=\muskip22
+\c@parentequation=\count417
+\dspbrk@lvl=\count418
+\tag@help=\toks22
+\row@=\count419
+\column@=\count420
+\maxfields@=\count421
+\andhelp@=\toks23
 \eqnshift@=\dimen152
 \alignsep@=\dimen153
 \tagshift@=\dimen154
 \tagwidth@=\dimen155
 \totwidth@=\dimen156
 \lineht@=\dimen157
-\@envbody=\toks22
-\multlinegap=\skip52
-\multlinetaggap=\skip53
-\mathdisplay@stack=\toks23
+\@envbody=\toks24
+\multlinegap=\skip74
+\multlinetaggap=\skip75
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -289,10 +576,6 @@ Package: a4 2025/12/29 v1.2g A4 based page layout
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks24
-)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
@@ -312,21 +595,15 @@ File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
 \Gin@req@width=\dimen159
 ) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count294
-\float@exts=\toks25
+\c@float@type=\count422
+\float@exts=\toks26
 \float@box=\box55
-\@float@everytoks=\toks26
+\@float@everytoks=\toks27
 \@floatcapt=\box56
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
 keys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -334,28 +611,9 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks27
-))
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
+) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
@@ -364,15 +622,8 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count295
 )
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count296
+\c@section@level=\count423
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
 ty
@@ -380,14 +631,14 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen160
-\Hy@linkcounter=\count297
-\Hy@pagecounter=\count298
+\Hy@linkcounter=\count424
+\Hy@pagecounter=\count425
  (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 ) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count299
+\Hy@SavedSpaceFactor=\count426
  (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 )
@@ -398,12 +649,7 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count300
-
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
-\Urlmuskip=\muskip18
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
+\c@Hy@tempcnt=\count427
 LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen161
 
@@ -415,7 +661,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count301
+\Fld@menulength=\count428
 \Field@Width=\dimen162
 \Fld@charsize=\dimen163
 Package hyperref Info: Hyper figures OFF on input line 6084.
@@ -425,16 +671,16 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count302
-\c@Item=\count303
-\c@Hfootnote=\count304
+\Hy@abspage=\count429
+\c@Item=\count430
+\c@Hfootnote=\count431
 )
 Package hyperref Info: Driver (autodetected): hluatex.
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
 File: hluatex.def 2026-01-29 v7.01p Hyperref driver for luaTeX
-\Fld@listcount=\count305
-\c@bookmark@seq@number=\count306
+\Fld@listcount=\count432
+\c@bookmark@seq@number=\count433
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
 echeck.sty
@@ -447,7 +693,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip54
+\Hy@SectionHShift=\skip76
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -464,27 +710,27 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen171
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count307
-\c@continuedfloat=\count308
+\c@caption@flags=\count434
+\c@continuedfloat=\count435
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count309
+\c@tracingmulticols=\count436
 \mult@box=\box57
 \multicol@leftmargin=\dimen172
-\c@unbalance=\count310
-\c@collectmore=\count311
-\doublecol@number=\count312
-\multicoltolerance=\count313
-\multicolpretolerance=\count314
+\c@unbalance=\count437
+\c@collectmore=\count438
+\doublecol@number=\count439
+\multicoltolerance=\count440
+\multicolpretolerance=\count441
 \full@width=\dimen173
 \page@free=\dimen174
 \premulticols=\dimen175
 \postmulticols=\dimen176
-\multicolsep=\skip55
-\multicolbaselineskip=\skip56
+\multicolsep=\skip77
+\multicolbaselineskip=\skip78
 \partial@page=\box58
 \last@line=\box59
 \mc@boxedresult=\box60
@@ -529,16 +775,16 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box98
 \@tempa=\box99
 \@tempa=\box100
-\c@minrows=\count315
-\c@columnbadness=\count316
-\c@finalcolumnbadness=\count317
+\c@minrows=\count442
+\c@columnbadness=\count443
+\c@finalcolumnbadness=\count444
 \last@try=\dimen178
 \multicolovershoot=\dimen179
 \multicolundershoot=\dimen180
 \mult@nat@firstbox=\box101
 \colbreak@box=\box102
-\mc@col@check@num=\count318
-\g__mc_curr_col_int=\count319
+\mc@col@check@num=\count445
+\g__mc_curr_col_int=\count446
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -568,13 +814,13 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \ar@mcellbox=\box103
 \extrarowheight=\dimen182
 \NC@list=\toks28
-\extratabsurround=\skip57
-\backup@length=\skip58
+\extratabsurround=\skip79
+\backup@length=\skip80
 \ar@cellbox=\box104
 )
 \everycr=\toks29
-\minrowclearance=\skip59
-\rownum=\count320
+\minrowclearance=\skip81
+\rownum=\count447
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/pgf/frontendlayer/tikz.
 sty
@@ -625,16 +871,16 @@ libraryfiltered.code.tex
 \pgf@yc=\dimen192
 \pgf@xd=\dimen193
 \pgf@yd=\dimen194
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count321
-\c@pgf@countb=\count322
-\c@pgf@countc=\count323
-\c@pgf@countd=\count324
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count448
+\c@pgf@countb=\count449
+\c@pgf@countc=\count450
+\c@pgf@countd=\count451
 \t@pgf@toka=\toks34
 \t@pgf@tokb=\toks35
 \t@pgf@tokc=\toks36
-\pgf@sys@id@count=\count325
+\pgf@sys@id@count=\count452
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgf.c
 fg
@@ -653,8 +899,8 @@ File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 ssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count326
-\pgfsyssoftpath@bigbuffer@items=\count327
+\pgfsyssoftpath@smallbuffer@items=\count453
+\pgfsyssoftpath@bigbuffer@items=\count454
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/systemlayer/pgfsy
 sprotocol.code.tex
@@ -671,7 +917,7 @@ code.tex)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparse
 r.code.tex
 \pgfmath@dimen=\dimen195
-\pgfmath@count=\count328
+\pgfmath@count=\count455
 \pgfmath@box=\box106
 \pgfmath@toks=\toks37
 \pgfmath@stack@operand=\toks38
@@ -699,7 +945,7 @@ ions.integerarithmetics.code.tex)
 code.tex)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfloat
 .code.tex
-\c@pgfmathroundto@lastzeros=\count329
+\c@pgfmathroundto@lastzeros=\count456
 ))
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.
 tex)
@@ -739,7 +985,7 @@ File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box107
 \pgf@hbox=\box108
 \pgf@layerbox@main=\box109
-\pgf@picture@serial@count=\count330
+\pgf@picture@serial@count=\count457
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 egraphicstate.code.tex
@@ -774,8 +1020,8 @@ File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 eshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count331
-\pgf@shadingcount=\count332
+\pgf@sys@shading@range@num=\count458
+\pgf@shadingcount=\count459
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcor
 eimage.code.tex
@@ -845,7 +1091,7 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibr
 aryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count333
+\pgf@plot@mark@count=\count460
 \pgfplotmarksize=\dimen280
 )
 \tikz@lastx=\dimen281
@@ -860,19 +1106,19 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@figbox@bg=\box113
 \tikz@tempbox=\box114
 \tikz@tempbox@bg=\box115
-\tikztreelevel=\count334
-\tikznumberofchildren=\count335
-\tikznumberofcurrentchild=\count336
-\tikz@fig@count=\count337
+\tikztreelevel=\count461
+\tikznumberofchildren=\count462
+\tikznumberofcurrentchild=\count463
+\tikz@fig@count=\count464
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodule
 matrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count338
-\pgfmatrixcurrentcolumn=\count339
-\pgf@matrix@numberofcolumns=\count340
+\pgfmatrixcurrentrow=\count465
+\pgfmatrixcurrentcolumn=\count466
+\pgf@matrix@numberofcolumns=\count467
 )
-\tikz@expandcount=\count341
+\tikz@expandcount=\count468
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tik
 z/libraries/tikzlibrarytopaths.code.tex
@@ -888,16 +1134,16 @@ Package: arydshln 2019/02/21 v1.76
 \adl@depth=\dimen293
 \adl@depthsave=\dimen294
 \adl@finaldepth=\dimen295
-\adl@columns=\count342
-\adl@ncol=\count343
-\adl@currentcolumn=\count344
-\adl@currentcolumnsave=\count345
-\adl@totalheight=\count346
-\adl@totalheightsave=\count347
-\adl@dash=\count348
-\adl@gap=\count349
-\adl@cla=\count350
-\adl@clb=\count351
+\adl@columns=\count469
+\adl@ncol=\count470
+\adl@currentcolumn=\count471
+\adl@currentcolumnsave=\count472
+\adl@totalheight=\count473
+\adl@totalheightsave=\count474
+\adl@dash=\count475
+\adl@gap=\count476
+\adl@cla=\count477
+\adl@clb=\count478
 \adl@everyvbox=\toks42
 \adl@LTpagetotal=\dimen296
 )
@@ -905,17 +1151,17 @@ Package: arydshln 2019/02/21 v1.76
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count352
+\c@subfigure=\count479
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count353
+\c@subtable=\count480
 ) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count354
-\csq@gtype=\count355
-\csq@glevel=\count356
-\csq@qlevel=\count357
-\csq@maxlvl=\count358
-\csq@tshold=\count359
+\csq@reset=\count481
+\csq@gtype=\count482
+\csq@glevel=\count483
+\csq@qlevel=\count484
+\csq@maxlvl=\count485
+\csq@tshold=\count486
 \csq@ltx@everypar=\toks43
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/csquotes/csquotes.def
@@ -932,24 +1178,24 @@ Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Allocating character ".
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/xstring/xstring.tex
-\xs_counta=\count360
-\xs_countb=\count361
+\xs_counta=\count487
+\xs_countb=\count488
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 ) (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2026-03-26 v3.5.1 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count362
-\l__siunitx_number_exponent_fixed_int=\count363
-\l__siunitx_number_min_decimal_int=\count364
-\l__siunitx_number_min_integer_int=\count365
-\l__siunitx_number_round_precision_int=\count366
-\l__siunitx_number_lower_threshold_int=\count367
-\l__siunitx_number_upper_threshold_int=\count368
-\l__siunitx_number_group_first_int=\count369
-\l__siunitx_number_group_size_int=\count370
-\l__siunitx_number_group_min_int=\count371
-\l__siunitx_number_group_minimum_int=\count372
-\l__siunitx_compound_count_int=\count373
+\l__siunitx_number_uncert_offset_int=\count489
+\l__siunitx_number_exponent_fixed_int=\count490
+\l__siunitx_number_min_decimal_int=\count491
+\l__siunitx_number_min_integer_int=\count492
+\l__siunitx_number_round_precision_int=\count493
+\l__siunitx_number_lower_threshold_int=\count494
+\l__siunitx_number_upper_threshold_int=\count495
+\l__siunitx_number_group_first_int=\count496
+\l__siunitx_number_group_size_int=\count497
+\l__siunitx_number_group_min_int=\count498
+\l__siunitx_number_group_minimum_int=\count499
+\l__siunitx_compound_count_int=\count500
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/translations/translatio
 ns.sty
@@ -966,9 +1212,9 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 \l__siunitx_table_after_box=\box122
 \l__siunitx_table_before_dim=\dimen299
 \l__siunitx_table_carry_dim=\dimen300
-\l__siunitx_unit_tmp_int=\count374
-\l__siunitx_unit_position_int=\count375
-\l__siunitx_unit_total_int=\count376
+\l__siunitx_unit_tmp_int=\count501
+\l__siunitx_unit_position_int=\count502
+\l__siunitx_unit_total_int=\count503
 \l__siunitx_sexagesimal_tmp_dim=\dimen301
 \l__siunitx_sexagesimal_marker_box=\box123
 \l__siunitx_sexagesimal_unit_box=\box124
@@ -1020,9 +1266,9 @@ z/libraries/tikzlibraryfpu.code.tex
 aryfpu.code.tex))
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/circuitikz/pgfcirc.de
 fines.tex
-\pgf@circ@count@a=\count377
-\pgf@circ@count@b=\count378
-\pgf@circ@count@c=\count379
+\pgf@circ@count@a=\count504
+\pgf@circ@count@b=\count505
+\pgf@circ@count@c=\count506
 \pgf@circ@res@up=\dimen313
 \pgf@circ@res@down=\dimen314
 \pgf@circ@res@zero=\dimen315
@@ -1041,7 +1287,7 @@ ls.tex
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/circuitikz/pgfcircpat
 h.tex
-\ctikz@vif@count=\count380
+\ctikz@vif@count=\count507
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/circuitikz/pgfcircsha
 pes.tex)
@@ -1051,7 +1297,7 @@ opoles.tex)
 oles.tex)
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/circuitikz/pgfcirctri
 poles.tex
-\pgf@circ@res@count=\count381
+\pgf@circ@res@count=\count508
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/generic/circuitikz/pgfcircqua
 dpoles.tex)
@@ -1073,7 +1319,7 @@ Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks44
 \verbatim@line=\toks45
-\verbatim@in@stream=\read4
+\verbatim@in@stream=\read5
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -1086,9 +1332,9 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@upperbox=\box127
 \tcb@lowerbox=\box128
 \tcb@phantombox=\box129
-\c@tcbbreakpart=\count382
-\c@tcblayer=\count383
-\c@tcolorbox@number=\count384
+\c@tcbbreakpart=\count509
+\c@tcblayer=\count510
+\c@tcolorbox@number=\count511
 \l__tcobox_tmpa_box=\box130
 \l__tcobox_tmpa_dim=\dimen325
 \tcb@temp=\box131
@@ -1099,7 +1345,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box135
-\sift@deathcycles=\count385
+\sift@deathcycles=\count512
 \@vwid@loff=\dimen326
 \@vwid@roff=\dimen327
 )
@@ -1150,17 +1396,17 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ode.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty
-\lst@mode=\count386
+\lst@mode=\count513
 \lst@gtempboxa=\box140
 \lst@token=\toks46
-\lst@length=\count387
+\lst@length=\count514
 \lst@currlwidth=\dimen330
-\lst@column=\count388
-\lst@pos=\count389
+\lst@column=\count515
+\lst@pos=\count516
 \lst@lostspace=\dimen331
 \lst@width=\dimen332
-\lst@newlines=\count390
-\lst@lineno=\count391
+\lst@newlines=\count517
+\lst@lineno=\count518
 \lst@maxwidth=\dimen333
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstpatch.sty
@@ -1168,8 +1414,8 @@ File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count392
-\lst@skipnumbers=\count393
+\c@lstnumber=\count519
+\lst@skipnumbers=\count520
 \lst@framebox=\box141
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg
@@ -1191,25 +1437,25 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
 .code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
 )
-\c@tcblisting=\count394
+\c@tcblisting=\count521
 ))
-\c@tcb@cnt@theorie=\count395
-\c@tcb@cnt@afl=\count396
+\c@tcb@cnt@theorie=\count522
+\c@tcb@cnt@afl=\count523
  (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/comment/comment.sty
-\CommentStream=\write4
+\CommentStream=\write5
 Excluding comment 'comment')
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip60
+\labelindent=\skip82
 \enit@outerparindent=\dimen334
 \enit@toks=\toks47
 \enit@inbox=\box142
-\enit@count@id=\count397
-\enitdp@description=\count398
+\enit@count@id=\count524
+\enitdp@description=\count525
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/tabulary/tabulary.sty
 Package: tabulary 2024/06/04 v0.11 tabulary package (DPC)
-\TY@count=\count399
+\TY@count=\count526
 \TY@linewidth=\dimen335
 \tymin=\dimen336
 \tymax=\dimen337
@@ -1224,8 +1470,8 @@ Package: xfrac 2024-06-04 Split-level fractions
 \l__xfrac_numerator_top_sep_dim=\dimen341
 \l__xfrac_slash_left_sep_dim=\dimen342
 \l__xfrac_slash_right_sep_dim=\dimen343
-\l__xfrac_slash_left_muskip=\muskip19
-\l__xfrac_slash_right_muskip=\muskip20
+\l__xfrac_slash_left_muskip=\muskip23
+\l__xfrac_slash_right_muskip=\muskip24
 
 LaTeX template Info: Declaring template type 'xfrac' taking 3 argument(s) on
 (template)           line 100.
@@ -1242,56 +1488,68 @@ LaTeX template Info: Declaring instance 'cmtt' of type xfrac on line 392.
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip61
-\multirow@cntb=\count400
-\multirow@dima=\skip62
+\multirow@colwidth=\skip83
+\multirow@cntb=\count527
+\multirow@dima=\skip84
 \bigstrutjot=\dimen344
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-
-(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
-tex.def
-File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count401
-Inserting `l3color' in `luaotfload.parse_color'.) (./report_fission_simulation_
-DA.aux)
+(./report_fission_simulation_DA.aux)
 \openout1 = report_fission_simulation_DA.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/biblatex/lbx/english.lb
+x
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout3 = report_fission_simulation_DA.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'report_fission_simulation_DA.bbl' found.
+ (./report_fission_simulation_DA.bbl)
+Package biblatex Info: Reference section=0 on input line 8.
+Package biblatex Info: Reference segment=0 on input line 8.
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count402
+\scratchcounter=\count528
 \scratchdimen=\dimen345
 \scratchbox=\box145
-\nofMPsegments=\count403
-\nofMParguments=\count404
+\nofMPsegments=\count529
+\nofMParguments=\count530
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count405
+\MPscratchCnt=\count531
 \MPscratchDim=\dimen346
-\MPnumerator=\count406
-\makeMPintoPDFobject=\count407
+\MPnumerator=\count532
+\makeMPintoPDFobject=\count533
 \everyMPtoPDFconversion=\toks49
 )
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
@@ -1304,15 +1562,15 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 7.
+Package hyperref Info: Link coloring OFF on input line 8.
  (./report_fission_simulation_DA.out) (./report_fission_simulation_DA.out)
-\@outlinefile=\write5
+\@outlinefile=\write6
 
-\openout5 = report_fission_simulation_DA.out
+\openout6 = report_fission_simulation_DA.out
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package csquotes Info: Making character " active on input line 7.
+Package csquotes Info: Making character " active on input line 8.
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/tran
 slations-basic-dictionary-english.trsl
@@ -1320,14 +1578,16 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 7.
-\c@lstlisting=\count408
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+or `english'. on input line 8.
+\c@lstlisting=\count534
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+
 
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1335,46 +1595,82 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (./intro.tex) (./implementation.tex [1
 
 {C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]) (./
-flowcharts.tex) (./code.tex)
-(./results.tex) (./conclusion.tex) (./report_fission_simulation_DA.bbl [4])
-[5] (./report_fission_simulation_DA.aux)
+flowcharts.tex
+<flowcharts/flowchart legend.png, id=95, 3643.6125pt x 602.25pt>
+File: flowcharts/flowchart legend.png Graphic file (type png)
+<use flowcharts/flowchart legend.png>
+Package luatex.def Info: flowcharts/flowchart legend.png  used on input line 21
+.
+(luatex.def)             Requested size: 460.72124pt x 76.14488pt.
+ [4]
+<flowcharts/Neutron class flowchart.png, id=104, 4075.225pt x 3503.0875pt>
+File: flowcharts/Neutron class flowchart.png Graphic file (type png)
+<use flowcharts/Neutron class flowchart.png>
+Package luatex.def Info: flowcharts/Neutron class flowchart.png  used on input 
+line 27.
+(luatex.def)             Requested size: 460.72124pt x 396.03137pt.
+<flowcharts/Simulator class flowchart.png, id=105, 4482.7475pt x 6157.0025pt>
+File: flowcharts/Simulator class flowchart.png Graphic file (type png)
+<use flowcharts/Simulator class flowchart.png>
+Package luatex.def Info: flowcharts/Simulator class flowchart.png  used on inpu
+t line 32.
+(luatex.def)             Requested size: 437.68376pt x 601.08041pt.
+<flowcharts/Uranium class flowchart.png, id=106, 1331.97626pt x 1736.4875pt>
+File: flowcharts/Uranium class flowchart.png Graphic file (type png)
+<use flowcharts/Uranium class flowchart.png>
+Package luatex.def Info: flowcharts/Uranium class flowchart.png  used on input 
+line 37.
+(luatex.def)             Requested size: 184.28568pt x 240.24495pt.
+ [5<./flowcharts/flowchart legend.png><./flowcharts/Neutron class flowchart.png>
+]
+Overfull \vbox (4.5804pt too high) has occurred while \output is active []
+
+
+[6<./flowcharts/Simulator class flowchart.png>]) (./code.tex) (./results.tex)
+(./conclusion.tex) [7<./flowcharts/Uranium class flowchart.png>]
+(./report_fission_simulation_DA.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `report_fission_simulation_DA.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: A0EEB5AB91A45662F70F98F59C35D8B0;1242.
+(rerunfilecheck)             Checksum: 926C38D5A16C53D368E9D872CC9CC97E;1424.
+Package logreq Info: Writing requests to 'report_fission_simulation_DA.run.xml'
+.
+
+\openout1 = report_fission_simulation_DA.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 54005 strings out of 476076
- 100000,1977958 words of node,token memory allocated
- 618 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 60 glue_spec
-, 18 attribute_list, 2 write nodes
-   avail lists: 1:2,2:653,3:204,4:34,5:387,6:35,7:7123,8:68,9:520,10:7,11:475
- 75507 multiletter control sequences out of 65536+600000
- 61 fonts using 4267751 bytes
- 89i,14n,94p,624b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12
--italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/
-lm/lmmono12-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/open
-type/public/lm/lmroman8-regular.otf><c:/users/dylan/appdata/local/programs/mikte
-x/fonts/opentype/public/lm/lmroman12-bold.otf><c:/users/dylan/appdata/local/prog
-rams/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/dylan/appda
-ta/local/programs/miktex/fonts/opentype/public/lm/lmroman17-regular.otf><C:/User
-s/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report_fission_simulation_DA.pdf (5 pages, 116057 bytes).
+ 61398 strings out of 476076
+ 125121,2848258 words of node,token memory allocated
+ 714 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 41 attribute, 72 glue_spec
+, 21 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 1:3,2:648,3:190,4:32,5:386,6:31,7:7124,8:68,9:517,10:6,11:475
+ 82790 multiletter control sequences out of 65536+600000
+ 62 fonts using 4398319 bytes
+ 89i,14n,94p,716b,1777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmromanca
+ps10-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/pu
+blic/lm/lmroman12-italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts
+/opentype/public/lm/lmmono12-regular.otf><c:/users/dylan/appdata/local/programs/
+miktex/fonts/opentype/public/lm/lmroman8-regular.otf><c:/users/dylan/appdata/loc
+al/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><c:/users/dylan/a
+ppdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><c:/
+users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman17-reg
+ular.otf><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report_fission_simulation_DA.pdf (7 pages, 859629 bytes).
 
-PDF statistics: 161 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 1048576)
- 96 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 205 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 1048576)
+ 112 words of extra memory for PDF output out of 10000 (max. 100000000)
 

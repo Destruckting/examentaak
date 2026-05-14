@@ -1,17 +1,117 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{Uranium}
-Wikipedia contributors.
-\newblock {Uranium}, 4 2026.
 
-\bibitem{U238}
-Wikipedia contributors.
-\newblock {Uranium-238}, 4 2026.
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{opgave}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=765bd55376c96a8a35f9daf25e807e68}{%
+           family={Van\bibnamedelimb Remortel},
+           familyi={V\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2b1c5584d9b0101dd590d1fc41f03a4a}{%
+           family={De\bibnamedelimb Lillo},
+           familyi={D\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{fullhash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{fullhashraw}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{bibnamehash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{authorbibnamehash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{authornamehash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{authorfullhash}{40cf799d3c57bf4baf3469a383e905bb}
+      \strng{authorfullhashraw}{40cf799d3c57bf4baf3469a383e905bb}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Examen Eerste Zittijd 2026 Inleiding programmeren voor fysici}
+      \field{year}{2026}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Uranium}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{4}
+      \field{title}{Uranium}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Uranium#
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Uranium#
+      \endverb
+    \endentry
+    \entry{U238}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhashraw}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{4}
+      \field{title}{Uranium-238}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Uranium-238
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Uranium-238
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{opgave}
-Nick Van~Remortel and Federico De~Lillo.
-\newblock {\em {Examen Eerste Zittijd 2026 Inleiding programmeren voor
-  fysici}}.
-\newblock 2026.
-
-\end{thebibliography}
