@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/flowcharts.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/flowcharts.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/math.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/preamble.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" afterDir="false" />
-    </list>
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

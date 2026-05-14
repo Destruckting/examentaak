@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 15:06
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 15:18
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1348,32 +1348,33 @@ anged.
 )
 
 Here is how much of LuaTeX's memory you used:
- 54002 strings out of 476076
+ 54005 strings out of 476076
  100000,1977958 words of node,token memory allocated
  618 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 60 glue_spec
 , 18 attribute_list, 2 write nodes
-   avail lists: 1:2,2:653,3:184,4:36,5:387,6:35,7:7123,8:68,9:520,10:7,11:475
- 75504 multiletter control sequences out of 65536+600000
- 60 fonts using 4141663 bytes
- 89i,14n,94p,624b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:2,2:653,3:204,4:34,5:387,6:35,7:7123,8:68,9:520,10:7,11:475
+ 75507 multiletter control sequences out of 65536+600000
+ 61 fonts using 4267751 bytes
+ 89i,14n,94p,624b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12
 -italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/
-lm/lmroman8-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/open
-type/public/lm/lmroman12-bold.otf><c:/users/dylan/appdata/local/programs/miktex/
-fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/dylan/appdata/local/pro
-grams/miktex/fonts/opentype/public/lm/lmroman17-regular.otf><C:/Users/dylan/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dy
-lan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb>
-Output written on report_fission_simulation_DA.pdf (5 pages, 110880 bytes).
+lm/lmmono12-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/open
+type/public/lm/lmroman8-regular.otf><c:/users/dylan/appdata/local/programs/mikte
+x/fonts/opentype/public/lm/lmroman12-bold.otf><c:/users/dylan/appdata/local/prog
+rams/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/dylan/appda
+ta/local/programs/miktex/fonts/opentype/public/lm/lmroman17-regular.otf><C:/User
+s/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report_fission_simulation_DA.pdf (5 pages, 116057 bytes).
 
-PDF statistics: 153 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 161 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 1048576)
  96 words of extra memory for PDF output out of 10000 (max. 100000000)
 
