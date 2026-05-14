@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  3 MAY 2026 16:44
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 10:53
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1332,7 +1332,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./intro.tex) (./math.tex) (./code.tex) (./flowcharts.tex) (./conclusion.tex)
+(./intro.tex) (./math.tex) (./flowcharts.tex) (./code.tex) (./conclusion.tex)
 [1
 
 {C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
@@ -1349,8 +1349,8 @@ nged.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `report_fission_simulation_DA.out':
-(rerunfilecheck)             Before: 89613EC4B4AEFF36392218AEDB3E870B;393
-(rerunfilecheck)             After:  7CAF516F0D0D4DE7A9279617DF9EFB03;373.
+(rerunfilecheck)             Before: 7CAF516F0D0D4DE7A9279617DF9EFB03;373
+(rerunfilecheck)             After:  DC9FF12322E1E83E206430F8CFDA0A65;373.
 )
 
 Here is how much of LuaTeX's memory you used:
@@ -1367,7 +1367,7 @@ Here is how much of LuaTeX's memory you used:
 -bold.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm
 /lmroman12-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opent
 ype/public/lm/lmroman17-regular.otf>
-Output written on report_fission_simulation_DA.pdf (1 page, 14348 bytes).
+Output written on report_fission_simulation_DA.pdf (1 page, 14326 bytes).
 
 PDF statistics: 53 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 1048576)
