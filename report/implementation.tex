@@ -33,4 +33,32 @@ $\theta$ is a bit trickier, for $\cos\theta$ is the uniformly distributed variab
 \subsection{mass distribution}
 For the mass distribution, we have to take into account that we have two possible shapes to simulate: a beam (or cube) and a sphere.
 \subsubsection{beam}
-For the 
+For the beam, we will assume that the mass ($M$) is equal to the volume ($V$). We can then change the shape of the beam using a scale factor ($S$). The influence of the scale factor can be shown with the following equations\supcite{opgave}:
+\[M=V=a^2b=\frac{a^2}{S}=b^3S^2\]
+Here, $a$ is the width and the height of the beam and $b$ is the depth of the beam. If we want to calculate $a$ and $b$, we can derive following equations\supcite{opgave}:
+\begin{align}
+	a&=\sqrt[3]{M*S} \\
+	b&=\sqrt[3]{\frac{M}{S^2}}
+\end{align}
+We can thus see that for $S=1$, we get a perfect square.
+
+We will assume that this beam is centered around (0, 0, 0). We can then create a starting point randomizer, using a uniform distribution between the following endpoints:
+\begin{displaymath}
+	\begin{cases}
+		x&\in\left[-\frac{a}{2}, \frac{a}{2}\right] \\
+		y&\in\left[-\frac{a}{2}, \frac{a}{2}\right] \\
+		z&\in\left[-\frac{b}{2}, \frac{b}{2}\right] \\
+	\end{cases}
+\end{displaymath}
+We can also use these conditions for the evaluation to check whether a point is inside the beam object.
+\subsubsection{sphere}
+For the sphere, we will also assume that the mass is equal to the volume. For this class, we don't need to implement a scale factor. We do however need to calculate the radius. this can be done by using the formula:
+\[V=\frac{4}{3}\pi\;r^3\]
+If we then substitute $V$ for $M$, we can derive the formula for the radius:
+\begin{equation}
+	r=\sqrt[3]{\frac{3}{4}\;M}
+\end{equation}
+
+For the random starting points inside the sphere, we can reuse the code for coordinates of a neutron. Because the distance for the neutrons is between 0 and 1, we can simply multiply this number with the radius to get the desired output.
+
+To evaluate whether a point is inside this sphere, we calculate the distance from the center of the circle (0, 0, 0) and compare this to the radius.

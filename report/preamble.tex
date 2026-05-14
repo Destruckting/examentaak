@@ -47,17 +47,21 @@ drop fuzzy shadow=black!50!white,boxrule=0.4pt}{afl}
 \newcommand{\prop}{\[s_{<f>}=\sqrt{\sum_{i=1}^N\left(\dfrac{\partial f}{\partial x_i}\right)^2\cdot S_{<x_i>}^2}
 \]}
 
-\newcommand{\ggem}{\begin{align*}
-    \left\langle x\right\rangle_g &=\frac{\sum\limits_{i=1}^N\frac{x_i}{{s_{i}}^2}}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}} \\
-     \\
-    s_{\left\langle x\right\rangle_g}&=\sqrt{\frac{1}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}}}    
-    \end{align*}}
+\newcommand{\ggem}{
+	\begin{align*}
+		\left\langle x\right\rangle_g &=\frac{\sum\limits_{i=1}^N\frac{x_i}{{s_{i}}^2}}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}} \\
+		\\
+		s_{\left\langle x\right\rangle_g}&=\sqrt{\frac{1}{\sum\limits_{i=1}^N\frac{1}{{s_{i}}^2}}}  
+	\end{align*}
+}
 
-\newcommand{\gem}{\begin{align*}
-\left\langle x\right\rangle&=\frac{\sum\limits_{i=1}^Nx_i}{N} \\
-\\
-s_{\left\langle x\right\rangle}&=\sqrt{\frac{\sum\limits_{i=1}^N\left( x_i-\left\langle x\right\rangle\right)^2}{N\left( N-1\right)}} \\
-\end{align*}}
+\newcommand{\gem}{
+	\begin{align*}
+		\left\langle x\right\rangle&=\frac{\sum\limits_{i=1}^Nx_i}{N} \\
+		\\
+		s_{\left\langle x\right\rangle}&=\sqrt{\frac{\sum\limits_{i=1}^N\left( x_i-\left\langle x\right\rangle\right)^2}{N\left( N-1\right)}} \\
+	\end{align*}
+}
 
 
 %voor gemakkelijker propagatieformules in te vullen

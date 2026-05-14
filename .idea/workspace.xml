@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="report updates">
-      <change afterPath="$PROJECT_DIR$/task temp.py" afterDir="false" />
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/intro.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/math.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/math.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/flowcharts.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/flowcharts.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/math.tex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/report/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/preamble.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" afterDir="false" />
@@ -450,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778749202253</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="added comments">
+      <option name="closed" value="true" />
+      <created>1778762779776</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1778762779776</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,7 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="protected values of simmulator" />
     <MESSAGE value="made class for Beam with width and height" />
     <MESSAGE value="random number generator for x, y and z" />
     <MESSAGE value="made survivor fraction function" />
@@ -505,6 +510,7 @@
     <MESSAGE value="checked spelling in test.py" />
     <MESSAGE value="used pylint and pycodestyle to optimize code in test.py" />
     <MESSAGE value="report updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="report updates" />
+    <MESSAGE value="added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
   </component>
 </project>

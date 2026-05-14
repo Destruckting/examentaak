@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 12:43
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 15:06
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1332,38 +1332,31 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./intro.tex) (./math.tex [1
+(./intro.tex) (./implementation.tex [1
 
-{C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]) (./flow
-charts.tex) (./code.tex) (./results.tex)
-(./conclusion.tex) (./report_fission_simulation_DA.bbl) [3]
-(./report_fission_simulation_DA.aux)
+{C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]) (./
+flowcharts.tex) (./code.tex)
+(./results.tex) (./conclusion.tex) (./report_fission_simulation_DA.bbl [4])
+[5] (./report_fission_simulation_DA.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-Package rerunfilecheck Warning: File `report_fission_simulation_DA.out' has cha
-nged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report_fission_simulation_DA.out':
-(rerunfilecheck)             Before: B7372764BB5DD98076E82AD70744CDC5;862
-(rerunfilecheck)             After:  5A7057FF2818314D645015C388DD2269;1094.
+Package rerunfilecheck Info: File `report_fission_simulation_DA.out' has not ch
+anged.
+(rerunfilecheck)             Checksum: A0EEB5AB91A45662F70F98F59C35D8B0;1242.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53988 strings out of 476076
+ 54002 strings out of 476076
  100000,1977958 words of node,token memory allocated
- 573 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 23 attribute, 60 glue_spec
-, 12 attribute_list, 2 write nodes
-   avail lists: 1:2,2:482,3:133,4:21,5:385,6:33,7:7109,8:68,9:521,10:7,11:471
- 75496 multiletter control sequences out of 65536+600000
+ 618 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 35 attribute, 60 glue_spec
+, 18 attribute_list, 2 write nodes
+   avail lists: 1:2,2:653,3:184,4:36,5:387,6:35,7:7123,8:68,9:520,10:7,11:475
+ 75504 multiletter control sequences out of 65536+600000
  60 fonts using 4141663 bytes
- 89i,8n,94p,624b,1105s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,14n,94p,624b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12
 -italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/
 lm/lmroman8-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/open
@@ -1372,13 +1365,15 @@ fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/dylan/appdata/local/pro
 grams/miktex/fonts/opentype/public/lm/lmroman17-regular.otf><C:/Users/dylan/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dy
 lan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
+Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.p
 fb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb>
-Output written on report_fission_simulation_DA.pdf (3 pages, 85112 bytes).
+cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb>
+Output written on report_fission_simulation_DA.pdf (5 pages, 110880 bytes).
 
-PDF statistics: 119 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 1048576)
- 72 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 153 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 1048576)
+ 96 words of extra memory for PDF output out of 10000 (max. 100000000)
 
