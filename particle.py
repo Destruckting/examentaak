@@ -1,7 +1,7 @@
 """
 particle class and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 27/04/2026
+last updated: 14/05/2026
 """
 from collections import namedtuple
 import numpy as np
@@ -117,7 +117,7 @@ class Neutron(Particle):
     def randomtheta() -> float:
         """randomizing theta"""
         randkey_theta = np.random.default_rng()
-        randnum_theta = randkey_theta.uniform(-0.5, 0.5)
+        randnum_theta = randkey_theta.uniform(-1, 1)
         randval_theta = np.arccos(randnum_theta)
         return float(randval_theta)
 

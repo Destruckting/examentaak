@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 10:53
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 12:15
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1332,10 +1332,11 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 (C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(./intro.tex) (./math.tex) (./flowcharts.tex) (./code.tex) (./conclusion.tex)
-[1
+(./intro.tex) (./math.tex [1
 
-{C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]) (./flowchar
+ts.tex) (./code.tex) (./results.tex)
+(./conclusion.tex) (./report_fission_simulation_DA.bbl [2]) [3]
 (./report_fission_simulation_DA.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1349,27 +1350,35 @@ nged.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `report_fission_simulation_DA.out':
-(rerunfilecheck)             Before: 7CAF516F0D0D4DE7A9279617DF9EFB03;373
-(rerunfilecheck)             After:  DC9FF12322E1E83E206430F8CFDA0A65;373.
+(rerunfilecheck)             Before: B84AB929A7AA68BE43F5DD174B9C2FD8;682
+(rerunfilecheck)             After:  B7372764BB5DD98076E82AD70744CDC5;862.
 )
 
 Here is how much of LuaTeX's memory you used:
- 53908 strings out of 476076
+ 53984 strings out of 476076
  100000,1977958 words of node,token memory allocated
- 544 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 15 attribute, 59 glue_spec
-, 8 attribute_list, 2 write nodes
-   avail lists: 1:2,2:301,3:125,4:21,5:69,6:24,7:628,8:1,9:168,10:3,11:24
- 75441 multiletter control sequences out of 65536+600000
- 37 fonts using 2366671 bytes
- 89i,7n,94p,473b,992s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 573 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 23 attribute, 60 glue_spec
+, 12 attribute_list, 2 write nodes
+   avail lists: 1:2,2:588,3:148,4:22,5:385,6:33,7:7109,8:68,9:521,10:7,11:471
+ 75494 multiletter control sequences out of 65536+600000
+ 59 fonts using 4009975 bytes
+ 89i,8n,94p,624b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12
--bold.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm
-/lmroman12-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opent
-ype/public/lm/lmroman17-regular.otf>
-Output written on report_fission_simulation_DA.pdf (1 page, 14326 bytes).
+-italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/
+lm/lmroman8-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/open
+type/public/lm/lmroman12-bold.otf><c:/users/dylan/appdata/local/programs/miktex/
+fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/dylan/appdata/local/pro
+grams/miktex/fonts/opentype/public/lm/lmroman17-regular.otf><C:/Users/dylan/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dy
+lan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb>
+Output written on report_fission_simulation_DA.pdf (3 pages, 82801 bytes).
 
-PDF statistics: 53 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 1048576)
- 48 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 114 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 1048576)
+ 64 words of extra memory for PDF output out of 10000 (max. 100000000)
 

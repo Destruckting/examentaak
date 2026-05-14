@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="used pylint and pycodestyle to optimize code in test.py">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="report updates">
+      <change afterPath="$PROJECT_DIR$/task temp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/particle.py" beforeDir="false" afterPath="$PROJECT_DIR$/particle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/intro.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/intro.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/math.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/math.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/preamble.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777836593135</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="report updates">
+      <option name="closed" value="true" />
+      <created>1778749202253</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1778749202253</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +480,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made convertor to spherical coordinates" />
     <MESSAGE value="protected values of simmulator" />
     <MESSAGE value="made class for Beam with width and height" />
     <MESSAGE value="random number generator for x, y and z" />
@@ -489,6 +504,7 @@
     <MESSAGE value="finished test.py" />
     <MESSAGE value="checked spelling in test.py" />
     <MESSAGE value="used pylint and pycodestyle to optimize code in test.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="used pylint and pycodestyle to optimize code in test.py" />
+    <MESSAGE value="report updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="report updates" />
   </component>
 </project>
