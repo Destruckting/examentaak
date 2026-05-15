@@ -546,6 +546,4 @@ if __name__ == '__main__':
     testsphere.visual_simulation()
     Simulator(1, 100).visual_simulation()
     plt.show()
-
     # be sure to put any simulations you don't want to plot after plt.show
-
