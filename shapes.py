@@ -1,7 +1,7 @@
 """
 shapes and subclasses
 Dylan Assinner (dylan.assinner@student.uantwerpen.be)
-last updated: 14/05/2026
+last updated: 15/05/2026
 """
 
 from collections import namedtuple
@@ -88,7 +88,7 @@ class Point:
             'sphere_coord', 'dist theta phi')
         sphere = sph(dist, theta, phi)
         return sphere
-# Point class was added for more general applications,  but is unnecessary.
+# Point class was added for more general applications, but is unnecessary.
 # It was therefore removed as direct input option.
 
 
