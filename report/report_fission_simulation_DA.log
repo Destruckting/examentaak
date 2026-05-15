@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  14 MAY 2026 16:12
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  15 MAY 2026 15:02
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1596,38 +1596,79 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {C:/Users/dylan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3]) (./
 flowcharts.tex
-<flowcharts/flowchart legend.png, id=95, 3643.6125pt x 602.25pt>
+<flowcharts/flowchart legend.png, id=168, 3643.6125pt x 602.25pt>
 File: flowcharts/flowchart legend.png Graphic file (type png)
 <use flowcharts/flowchart legend.png>
 Package luatex.def Info: flowcharts/flowchart legend.png  used on input line 21
 .
 (luatex.def)             Requested size: 460.72124pt x 76.14488pt.
  [4]
-<flowcharts/Neutron class flowchart.png, id=104, 4075.225pt x 3503.0875pt>
+<flowcharts/Neutron class flowchart.png, id=177, 4075.225pt x 3503.0875pt>
 File: flowcharts/Neutron class flowchart.png Graphic file (type png)
 <use flowcharts/Neutron class flowchart.png>
 Package luatex.def Info: flowcharts/Neutron class flowchart.png  used on input 
 line 27.
 (luatex.def)             Requested size: 460.72124pt x 396.03137pt.
-<flowcharts/Simulator class flowchart.png, id=105, 4482.7475pt x 6157.0025pt>
+<flowcharts/Simulator class flowchart.png, id=178, 4482.7475pt x 6157.0025pt>
 File: flowcharts/Simulator class flowchart.png Graphic file (type png)
 <use flowcharts/Simulator class flowchart.png>
 Package luatex.def Info: flowcharts/Simulator class flowchart.png  used on inpu
-t line 32.
+t line 33.
 (luatex.def)             Requested size: 437.68376pt x 601.08041pt.
-<flowcharts/Uranium class flowchart.png, id=106, 1331.97626pt x 1736.4875pt>
+<flowcharts/Uranium class flowchart.png, id=179, 1331.97626pt x 1736.4875pt>
 File: flowcharts/Uranium class flowchart.png Graphic file (type png)
 <use flowcharts/Uranium class flowchart.png>
 Package luatex.def Info: flowcharts/Uranium class flowchart.png  used on input 
-line 37.
+line 39.
 (luatex.def)             Requested size: 184.28568pt x 240.24495pt.
  [5<./flowcharts/flowchart legend.png><./flowcharts/Neutron class flowchart.png>
 ]
 Overfull \vbox (4.5804pt too high) has occurred while \output is active []
 
 
-[6<./flowcharts/Simulator class flowchart.png>]) (./code.tex) (./results.tex)
-(./conclusion.tex) [7<./flowcharts/Uranium class flowchart.png>]
+[6<./flowcharts/Simulator class flowchart.png>]) (./code.tex
+(C:/Users/dylan/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+[7<./flowcharts/Uranium class flowchart.png>] [8]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 49.
+ [9]) (./results.tex
+<3D plots/Simulator.png, id=222, 462.528pt x 346.896pt>
+File: 3D plots/Simulator.png Graphic file (type png)
+<use 3D plots/Simulator.png>
+Package luatex.def Info: 3D plots/Simulator.png  used on input line 7.
+(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (1.80562pt too wide) in paragraph at lines 7--8
+ [][] 
+ []
+
+[10]
+<3D plots/Beam.png, id=228, 462.528pt x 346.896pt>
+File: 3D plots/Beam.png Graphic file (type png)
+<use 3D plots/Beam.png>
+Package luatex.def Info: 3D plots/Beam.png  used on input line 16.
+(luatex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (1.80562pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+[11<./3D plots/Simulator.png>]
+<3D plots/Sphere.png, id=236, 462.528pt x 346.896pt>
+File: 3D plots/Sphere.png Graphic file (type png)
+<use 3D plots/Sphere.png>
+Package luatex.def Info: 3D plots/Sphere.png  used on input line 23.
+(luatex.def)             Requested size: 370.02289pt x 277.51717pt.
+ [12<./3D plots/Beam.png>]
+<3D plots/Sphere_out_gen1.png, id=243, 462.528pt x 346.896pt>
+File: 3D plots/Sphere_out_gen1.png Graphic file (type png)
+<use 3D plots/Sphere_out_gen1.png>
+Package luatex.def Info: 3D plots/Sphere_out_gen1.png  used on input line 29.
+(luatex.def)             Requested size: 231.26343pt x 173.44757pt.
+ [13<./3D plots/Sphere.png><./3D plots/Sphere_out_gen1.png>]) (./conclusion.tex
+) [14] [15]
 (./report_fission_simulation_DA.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1635,7 +1676,7 @@ L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `report_fission_simulation_DA.out' has not ch
 anged.
-(rerunfilecheck)             Checksum: 926C38D5A16C53D368E9D872CC9CC97E;1424.
+(rerunfilecheck)             Checksum: FAD837C42CB4425F7CB99765A96432A2;4927.
 Package logreq Info: Writing requests to 'report_fission_simulation_DA.run.xml'
 .
 
@@ -1643,34 +1684,35 @@ Package logreq Info: Writing requests to 'report_fission_simulation_DA.run.xml'
 )
 
 Here is how much of LuaTeX's memory you used:
- 61398 strings out of 476076
+ 61786 strings out of 476076
  125121,2848258 words of node,token memory allocated
- 714 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 41 attribute, 72 glue_spec
-, 21 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:3,2:648,3:190,4:32,5:386,6:31,7:7124,8:68,9:517,10:6,11:475
- 82790 multiletter control sequences out of 65536+600000
- 62 fonts using 4398319 bytes
- 89i,14n,94p,716b,1777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 720 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 43 attribute, 72 glue_spec
+, 22 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 1:2,2:1208,3:191,4:76,5:908,6:33,7:7363,8:68,9:1334,10:7,11:490
+ 83129 multiletter control sequences out of 65536+600000
+ 64 fonts using 4656479 bytes
+ 89i,14n,94p,716b,1856s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmromanca
 ps10-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/pu
-blic/lm/lmroman12-italic.otf><c:/users/dylan/appdata/local/programs/miktex/fonts
-/opentype/public/lm/lmmono12-regular.otf><c:/users/dylan/appdata/local/programs/
-miktex/fonts/opentype/public/lm/lmroman8-regular.otf><c:/users/dylan/appdata/loc
-al/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><c:/users/dylan/a
-ppdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-regular.otf><c:/
-users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman17-reg
-ular.otf><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report_fission_simulation_DA.pdf (7 pages, 859629 bytes).
+blic/lm/lmmonolt10-bold.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/
+opentype/public/lm/lmroman12-italic.otf><c:/users/dylan/appdata/local/programs/m
+iktex/fonts/opentype/public/lm/lmmono12-regular.otf><c:/users/dylan/appdata/loca
+l/programs/miktex/fonts/opentype/public/lm/lmroman8-regular.otf><c:/users/dylan/
+appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-bold.otf><c:/us
+ers/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman12-regul
+ar.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lm
+roman17-regular.otf><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/dylan/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/dylan/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report_fission_simulation_DA.pdf (15 pages, 1133057 bytes).
 
-PDF statistics: 205 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 1048576)
- 112 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 346 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 1048576)
+ 256 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added comments">
+    <list default="true" id="0f976bba-616c-4444-8ee5-0190e5fd58d2" name="Changes" comment="added and removed plot">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/bib.bib" beforeDir="false" afterPath="$PROJECT_DIR$/report/bib.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/code.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/code.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/flowcharts.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/flowcharts.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/flowcharts/Neutron class flowchart.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/flowcharts/Simulator class flowchart.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/flowcharts/Uranium class flowchart.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/preamble.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/flowcharts/Neutron class flowchart.png" beforeDir="false" afterPath="$PROJECT_DIR$/report/flowcharts/Neutron class flowchart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/implementation.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.bbl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.blg" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.bcf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.bcf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/report_fission_simulation_DA.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/report/results.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +65,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/Documents/Unif/BA_Fys/semester_2/inleiding_programeren/examentaak&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -461,7 +459,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778762779776</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="added comment">
+      <option name="closed" value="true" />
+      <created>1778836032892</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1778836032892</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added and removed plot">
+      <option name="closed" value="true" />
+      <created>1778849953704</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1778849953704</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,8 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made class for Beam with width and height" />
-    <MESSAGE value="random number generator for x, y and z" />
     <MESSAGE value="made survivor fraction function" />
     <MESSAGE value="changes" />
     <MESSAGE value="put survivor fraction in parent class" />
@@ -516,6 +528,8 @@
     <MESSAGE value="used pylint and pycodestyle to optimize code in test.py" />
     <MESSAGE value="report updates" />
     <MESSAGE value="added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
+    <MESSAGE value="added comment" />
+    <MESSAGE value="added and removed plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="added and removed plot" />
   </component>
 </project>

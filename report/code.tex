@@ -1,0 +1,73 @@
+\subsection{Particle class}
+The Particle class is the parent class off the Neutron class and the Uranium class. It contains property protection for the x, y and z coordinates, along with the \lstinline[language=PythonPlus, style=colorEX]|__repr__| and \lstinline[language=PythonPlus, style=colorEX]|__str__| functions.
+\subsection{Neutron class (Figure \ref{flow:Neutron})}
+The Neutron class inherits the above mentioned. It also contains the randomizers we talked about in section \ref{randomizer}. We made these randomizers using the \lstinline[language=PythonPlus, style=colorEX]|numpy| package. Each variable has its own RNG key to enhance randomness. The Neutron class also contains the property protection for these randomized variables, as well as the calculations for the new endpoint \eqref{newcoords}.
+\subsection{Uranium class (Figure \ref{flow:Uranium})}
+The Uranium class also inherits form the Particle class. The only added feature is a function that uses the x, y and z coordinates from the input as the starting point of two new Neutron class objects.
+\subsection{Simulator class (Figure \ref{flow:Simulator})}
+The simulator class is the parent class of the BeamSim and SphereSim classes. All functions are programmed in the Simulator class, the subclasses only add or change certain mechanics.
+The Simulator class contains two main functionalities: calculating the survivor fraction and a visual simulation.
+
+We will first discuss the functions that both methods use.
+
+The first and most important feature is the property protection. The simulator class takes two inputs, the mass and the amount of points to simulate. These properties also get protected.
+There are also two private properties: the fig and ax property. These contain the groundwork for a three dimensional \lstinline[language=PythonPlus, style=colorEX]|matplotlib| plot. This was necessary to make the inheritance and separate plot function work, but more on this later.
+
+The second method is the \lstinline[language=PythonPlus, style=colorEX]|__str__| and \lstinline[language=PythonPlus, style=colorEX]|__repr__| functions. These are unique for each of the subclasses.
+
+We can now look at the more specialized methods.
+
+The \lstinline[language=PythonPlus, style=colorEX]|in_object(x, y, z)| method checks whether the object is located inside the simulated mass. This always returns True for the Simulator class.
+
+The \lstinline[language=PythonPlus, style=colorEX]|randomstart()| method is the randomizer for the starting point. It returns a named tuple with the x, y and z coordinates of the starting point. For the Simulator class, this is always set to (0, 0, 0). Most functions that give multiple outputs use named tuples to make the code easier to work with.
+
+This were all the general features, we can now look at the methods that the user will most likely see.
+
+\subsubsection{survivor\_fraction()}
+The \lstinline[language=PythonPlus, style=colorEX]|survivor_fraction()| method calculates the survivor fraction by generating a user specified amount of \lstinline[language=PythonPlus, style=colorEX]|randomstart()| points. These get used as input in the \lstinline[language=PythonPlus, style=colorEX]|Uranium| class. The two Neutron class objects that are made are then checked with \lstinline[language=PythonPlus, style=colorEX]|in_object()|.
+
+If the particle is inside the mass, it adds one to the variable \lstinline[language=PythonPlus, style=colorEX]|in_volume|. If the particle is outside of the mass, it adds one to the variable \lstinline[language=PythonPlus, style=colorEX]|out_volume|. 
+
+By dividing \lstinline[language=PythonPlus, style=colorEX]|in_volume| by \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|, we get the survivor fraction. We can also check the fraction of points stat stayed in the volume or went outside the volume by dividing the corresponding variable by two times \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|. This allows us to verify the survivor fraction. These three calculated values are given as output in a named tuple.
+\subsubsection{visual\_simulation()}
+The \lstinline[language=PythonPlus, style=colorEX]|visual_simulation()| function uses the \lstinline[language=PythonPlus, style=colorEX]|randomstart()| method to make a random starting point inside the volume (gen0). 
+It then uses the Uranium and Neutron class objects in loops to generate a sequence of fission reactions inside the mass. If a particle fall outside of the object, it won't be used for fission anymore.
+
+The code supports up to seven generations of fission, but it usually doesn't get that far in the plots for the subclasses. If the lists for all generations are made, we will loop over these lists once again using a private \lstinline[language=PythonPlus, style=colorEX]|plot_function()| method. 
+
+This function is declared as private by appending \lstinline[language=PythonPlus, style=colorEX]|__| to the name of the function. This \lstinline[language=PythonPlus, style=colorEX]|plot_function()| takes a list as input for the points to plot, along with the type of marker you want to use in the scatterplot and the color for the objects inside the mass and outside the mass. 
+
+For a complete list of all colors, please refer to \textit{color\_picker.md} for the list of hexcodes for each generation. We used the standard dot as marker, but other types like numbers are also supported (see \lstinline[language=PythonPlus, style=colorEX]|matplotlib| documentation). When running the program, you can follow the way the fission reactions occurred by following the color from dark to light. The random starting point is plotted in black. This is also made easier by not only drawing the scatterplot of the points, but also drawing a line in the color of the endpoint to the new marker.
+
+\subsection{BeamSim class}
+Because it inherits almost all functions from the Simulator class, we will quickly go over the added or changed functions. As seen in section \ref{beam}, the simulation of a beam shaped uranium object requires an extra scale input. We then calculate the width and the depth using the formulae mentioned in that section.
+
+As mentioned in the previous section, the \lstinline[language=PythonPlus, style=colorEX]|__repr__| and \lstinline[language=PythonPlus, style=colorEX]|__str__| functions are unique for each of the subclasses.
+
+For the \lstinline[language=PythonPlus, style=colorEX]|randomstart()| function, we use three separate RNG keys for each of the coordinates. This assures no connection between the variables. Every variable then gets a random uniformly distributed value between -0.5 and 0.5, which we mutliply with the corresponding value for width or depth. This function then returns a named tuple.
+
+For the check whether a particle is inside the object (\lstinline[language=PythonPlus, style=colorEX]|in_object(x, y, z)|), we use the conditions mentioned in section \ref{beam} inside a \lstinline[language=PythonPlus, style=colorEX]|bool()| function. This standard function returns true if all the conditions inside the brackets are met and false if not.
+
+There are no changes made to the \lstinline[language=PythonPlus, style=colorEX]|survivor_fraction()| function in any of the subclasses. For the \lstinline[language=PythonPlus, style=colorEX]|visual_simulation()| method, we added lines to display the beam in the plot window.
+
+\subsection{SphereSim class}
+This function takes no extra input arguments. It uses the math in section \ref{sphere}. 
+
+For the starting point, we reuse the code from the Neutron class randomizer, with the calculated radius of the sphere multiplied by the distance modifier.
+
+The check \lstinline[language=PythonPlus, style=colorEX]|in_object()| is also programmed using the \lstinline[language=PythonPlus, style=colorEX]|bool()| function, but this time we check whether the disance from the center is smaller than or equal to the radius.
+
+The reason why we needed to add the fig and ax variables as inherent properties of the simulators is not only to make working with a separate plotting function easier, but also to make the use of \lstinline[language=PythonPlus, style=colorEX]|matplotlib.patches| possible. The use of this subpackage of \lstinline[language=PythonPlus, style=colorEX]|matplotlib| makes the drawing of smooth circles possible. To get a clear representation of the sphere in the visual simulation, we draw a circle of the calculated radius along the x, y and z axis.
+\subsection{Point class}
+The Point class is a function that was implemented with the idea of a more generalized placement of the objects. This however was deemed unnecessary and the input option was thus removed in the Simulator classes. The class is however still used with a standard position at (0, 0, 0). 
+The Point class takes an x, y and z coordinate as input. It has the \lstinline[language=PythonPlus, style=colorEX]|__repr__|, \lstinline[language=PythonPlus, style=colorEX]|__str__|, \lstinline[language=PythonPlus, style=colorEX]|__add__| and \lstinline[language=PythonPlus, style=colorEX]|__sub__| functions defined, along with a function to return the point in spherical coordinates.
+
+\subsection{test.py}
+Now that all the classes and their methods are explained, we will talk a little bit about the \lstinline[language=PythonPlus, style=colorEX]|test.py| file.
+
+Because the figure and axes of the \lstinline[language=PythonPlus, style=colorEX]|matplotlib| plot are inherent attributes of the simulator classes, plot windows are made with each simulator object. This means that these need to be cleared from the memory to avoid excess memory usage. To do this, we defined a small function that plots the windows and closes them in rapid succession, to allow space for new simulations.
+
+To make the execution of the tasks\supcite{opgave} easier, we used the tabulate package to make easily interpretable tables.
+
+\subsection{code optimization}
+The code in all the files was optimized using \lstinline[language=PythonPlus, style= colorEX]|pylint| and \lstinline[language=PythonPlus, style=colorEX]|pycodestyle|, assuring that the code was clear and readable.

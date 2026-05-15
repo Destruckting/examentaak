@@ -16,15 +16,15 @@ By changing the mass (user input), we can try to find the point at which the sur
 	f=\frac{N_{\text{inside volume}}}{N_{\text{gen 1}}}
 \end{equation}
 To be able to check whether the neutrons are inside the volume, we first need to build a randomizer for the movement of the neutrons inside the simulations.
-\subsection{coordinate randomization}
+\subsection{coordinate randomization}\label{randomizer}
 Using a randomizer to generate random uniformly distributed points, we can calculate the path of the neutrons. If the neutrons have starting coordinates ($x_0$, $y_0$, $z_0$), we can describe their endpoints ($x_1$, $y_1$, $z_1$) using the equations:
-\begin{displaymath}
+\begin{equation}
 	\begin{cases}
 		x_1= x_0+d\;\sin\theta\;\cos\phi \\
 		y_1=y_0+d\;\sin\theta\;\sin\phi \\
 		z_1=z_0+d\;\cos\theta
-	\end{cases}
-\end{displaymath}
+	\end{cases} \label{newcoords}
+\end{equation}
 Here, $d$ is the distance the neutron travels and $\theta$ and $\phi$ are the angles of spherical coordinates. We will need to randomize these three variables.
 
 $d$ Is a random variable between 1 and 0. $\phi$ Is a random variable between $2\pi$ and 0. Both of these variables are uniformly distributed.
@@ -32,7 +32,7 @@ $d$ Is a random variable between 1 and 0. $\phi$ Is a random variable between $2
 $\theta$ is a bit trickier, for $\cos\theta$ is the uniformly distributed variable. We will thus have to randomize a value between $-1$ and $1$ and use the $\arccos$ function to  calculate the angle $\theta$.
 \subsection{mass distribution}
 For the mass distribution, we have to take into account that we have two possible shapes to simulate: a beam (or cube) and a sphere.
-\subsubsection{beam}
+\subsubsection{beam} \label{beam}
 For the beam, we will assume that the mass ($M$) is equal to the volume ($V$). We can then change the shape of the beam using a scale factor ($S$). The influence of the scale factor can be shown with the following equations\supcite{opgave}:
 \[M=V=a^2b=\frac{a^2}{S}=b^3S^2\]
 Here, $a$ is the width and the height of the beam and $b$ is the depth of the beam. If we want to calculate $a$ and $b$, we can derive following equations\supcite{opgave}:
@@ -51,7 +51,7 @@ We will assume that this beam is centered around (0, 0, 0). We can then create a
 	\end{cases}
 \end{displaymath}
 We can also use these conditions for the evaluation to check whether a point is inside the beam object.
-\subsubsection{sphere}
+\subsubsection{sphere} \label{sphere}
 For the sphere, we will also assume that the mass is equal to the volume. For this class, we don't need to implement a scale factor. We do however need to calculate the radius. this can be done by using the formula:
 \[V=\frac{4}{3}\pi\;r^3\]
 If we then substitute $V$ for $M$, we can derive the formula for the radius:
