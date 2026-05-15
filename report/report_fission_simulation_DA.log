@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  15 MAY 2026 15:02
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 26.2) (format=lualatex 2026.4.8)  15 MAY 2026 16:01
  restricted system commands enabled.
 **report_fission_simulation_DA.tex
 (./report_fission_simulation_DA.tex
@@ -1667,8 +1667,8 @@ File: 3D plots/Sphere_out_gen1.png Graphic file (type png)
 <use 3D plots/Sphere_out_gen1.png>
 Package luatex.def Info: 3D plots/Sphere_out_gen1.png  used on input line 29.
 (luatex.def)             Requested size: 231.26343pt x 173.44757pt.
- [13<./3D plots/Sphere.png><./3D plots/Sphere_out_gen1.png>]) (./conclusion.tex
-) [14] [15]
+ [13<./3D plots/Sphere.png><./3D plots/Sphere_out_gen1.png>]) [14] (./conclusio
+n.tex) [15]
 (./report_fission_simulation_DA.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1684,15 +1684,15 @@ Package logreq Info: Writing requests to 'report_fission_simulation_DA.run.xml'
 )
 
 Here is how much of LuaTeX's memory you used:
- 61786 strings out of 476076
+ 61787 strings out of 476076
  125121,2848258 words of node,token memory allocated
  720 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 43 attribute, 72 glue_spec
 , 22 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:2,2:1208,3:191,4:76,5:908,6:33,7:7363,8:68,9:1334,10:7,11:490
- 83129 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:1208,3:191,4:76,5:908,6:33,7:7396,8:68,9:1334,10:7,11:496
+ 83130 multiletter control sequences out of 65536+600000
  64 fonts using 4656479 bytes
- 89i,14n,94p,716b,1856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,14n,94p,716b,1781s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/public/lm/lmromanca
 ps10-regular.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/opentype/pu
 blic/lm/lmmonolt10-bold.otf><c:/users/dylan/appdata/local/programs/miktex/fonts/
@@ -1710,9 +1710,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/dylan/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dylan/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dylan/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report_fission_simulation_DA.pdf (15 pages, 1133057 bytes).
+Output written on report_fission_simulation_DA.pdf (15 pages, 1134275 bytes).
 
-PDF statistics: 346 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 347 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 1048576)
  256 words of extra memory for PDF output out of 10000 (max. 100000000)
 

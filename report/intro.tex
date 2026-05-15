@@ -1,6 +1,6 @@
-Fission is a well studied process used in nuclear physics for the construction of nuclear power plants and nuclear weapons. One of the elements most commonly used for fission reactions is Uranium. It has two major isotopes: Uranium-238 and Uranium-235. Uranium-238 ($^{238}$U) can be found in nature and is a radioactive element, producing $\alpha$-type radiation with a half-life of $4.463*10^9$ years \supcite{U238}. There is also the more radioactive isotope uranium-235 ($^{235}$U). This isotope is more favorable for fission. 
+Fission is a well studied process used in nuclear physics for the construction of for example nuclear power plants and nuclear weapons. One of the elements most commonly used for fission reactions is Uranium. It has two major isotopes: Uranium-238 and Uranium-235. Uranium-238 ($^{238}$U) can be found in nature and is a radioactive element, producing $\alpha$-type radiation with a half-life of $4.463*10^9$ years\supcite{U238}. There is also the more radioactive isotope uranium-235 ($^{235}$U). This isotope is more favorable for fission. 
 
-The fission reaction we are going to study is fission using $^{235}$U. If we add a neutron to this core, it transitions into the very unstable isotope of Uranium-236. This can then split into two or more lighter elements and an excess of neutrons. There are two prominent reactions here:
+The fission reaction we are going to study is fission using $^{235}$U. If we add a neutron to its core, it transitions into the very unstable isotope of Uranium-236. This can then split into two or more lighter elements and an excess of neutrons. There are two prominent reactions here:
 \[
 {^{1}_0\text{n}}+{^{235}_{\;\;92}\text{U}}\rightarrow{^{236}_{\;\;92}\text{U}}\rightarrow{^{140}_{\;\;54}\text{Xe}}+{^{94}_{38}\text{Kr}}+2\;{^1_0\text{n}}
 \]
@@ -10,8 +10,8 @@ The fission reaction we are going to study is fission using $^{235}$U. If we add
 
 In this simulation, we will use the first reaction as a basis.
 
-The intent of the simulation is to calculate the critical mass. This is when the reaction becomes self-sustaining.
+The purpose of the simulation is to calculate the critical mass. This is when the reaction becomes self-sustaining.
 
 In order to explain the concept of critical mass, we need to look at the environment in which the fission occurs. We will assume that there are no possibilities for fission outside our simulated mass (which will consist entirely of ${235}$U and will always follow the first reaction, for simplicity). We also assume that every neutron produced will travel a short random distance. If it is still inside the mass at that point, it will provoke another fission reaction.
 
-The critical mass is thus the mass for which an equal amount of neutrons stay inside the mass as are leaving the object, thus maintaining a constant steady amount of reactions. If the mass is greater than, the critical mass, it will become what we call "supercritical", meaning that more fission reactions are initiated than originally started. If the mass is lower than the critical mass, the amount of fission reactions will diminish and eventually stop.
+The critical mass is thus the mass for which an equal amount of neutrons stay inside the mass as are leaving the object, thus maintaining a constant steady amount of reactions. If the mass is greater than the critical mass, it will become what we call "supercritical" meaning that more fission reactions are initiated than originally started. If the mass is lower than the critical mass, the amount of fission reactions will diminish and eventually stop.

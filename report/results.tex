@@ -7,7 +7,7 @@ First, we will showcase the visual simulations using a Simulator class object an
 	\includegraphics[scale=1]{3D plots/Simulator.png}
 	\caption{visual simulation Simulator class object}
 \end{figure}
-The dots are all green here, because the Simulator class always returns True for \lstinline[language=PythonPlus, style=colorEX]|in_object(x, y, z)|. Note that the center, where the starting point (0, 0, 0) is contains a lot more darker points, whereas the points towards the edges are more of the lighter green, signifying later generations.
+The dots are all green here, because the Simulator class always returns True for \lstinline[language=PythonPlus, style=colorEX]|in_object(x, y, z)|. Note that the center, where the starting point (0, 0, 0) is, contains a lot more darker points, whereas the points towards the edges are predominantly lighter green, signifying later generations.
 
 All visual simulations are taken from the testing code at the bottom of \textit{shapes.py}.
 \subsubsection{BeamSim class object}
@@ -23,7 +23,7 @@ This plot has a mass of 1 and a scale of 1. Thus we get a square. Note that the 
 	\includegraphics[scale=0.8]{3D plots/Sphere.png}
 	\caption{visual simulation SphereSim class object}
 \end{figure}
-The SphereSim can sometimes be a hard class to get a nice plots, as the points sometimes leave the object as soon as the first generation.
+The SphereSim can sometimes be a hard class to get nice plots, as the points sometimes leave the object as soon as the first generation.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{3D plots/Sphere_out_gen1.png}
@@ -55,3 +55,4 @@ We then tried a scale of 0.5, but this never seemed to give us a critical mass, 
 From this table, we can estimate that it follows an exponential or power curve, but without more points it will be hard to get an accurate fit on the data.
 \subsection{third task: finding the critical mass of a sphere}
 For the final task, we had to find the critical mass of a sphere. We found that the critical mass was 0.875 with an error margin of 0.125.
+\pagebreak

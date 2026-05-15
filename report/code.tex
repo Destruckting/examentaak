@@ -3,7 +3,7 @@ The Particle class is the parent class off the Neutron class and the Uranium cla
 \subsection{Neutron class (Figure \ref{flow:Neutron})}
 The Neutron class inherits the above mentioned. It also contains the randomizers we talked about in section \ref{randomizer}. We made these randomizers using the \lstinline[language=PythonPlus, style=colorEX]|numpy| package. Each variable has its own RNG key to enhance randomness. The Neutron class also contains the property protection for these randomized variables, as well as the calculations for the new endpoint \eqref{newcoords}.
 \subsection{Uranium class (Figure \ref{flow:Uranium})}
-The Uranium class also inherits form the Particle class. The only added feature is a function that uses the x, y and z coordinates from the input as the starting point of two new Neutron class objects.
+The Uranium class also inherits from the Particle class. The only added feature is a function that uses the x, y and z coordinates from the input as the starting point of two new Neutron class objects.
 \subsection{Simulator class (Figure \ref{flow:Simulator})}
 The simulator class is the parent class of the BeamSim and SphereSim classes. All functions are programmed in the Simulator class, the subclasses only add or change certain mechanics.
 The Simulator class contains two main functionalities: calculating the survivor fraction and a visual simulation.
@@ -28,10 +28,10 @@ The \lstinline[language=PythonPlus, style=colorEX]|survivor_fraction()| method c
 
 If the particle is inside the mass, it adds one to the variable \lstinline[language=PythonPlus, style=colorEX]|in_volume|. If the particle is outside of the mass, it adds one to the variable \lstinline[language=PythonPlus, style=colorEX]|out_volume|. 
 
-By dividing \lstinline[language=PythonPlus, style=colorEX]|in_volume| by \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|, we get the survivor fraction. We can also check the fraction of points stat stayed in the volume or went outside the volume by dividing the corresponding variable by two times \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|. This allows us to verify the survivor fraction. These three calculated values are given as output in a named tuple.
+By dividing \lstinline[language=PythonPlus, style=colorEX]|in_volume| by \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|, we get the survivor fraction. We can also check the fraction of points that stayed in the volume or went outside the volume by dividing the corresponding variable by two times \lstinline[language=PythonPlus, style=colorEX]|amount_of_points|. This allows us to verify the survivor fraction. These three calculated values are given as output in a named tuple.
 \subsubsection{visual\_simulation()}
 The \lstinline[language=PythonPlus, style=colorEX]|visual_simulation()| function uses the \lstinline[language=PythonPlus, style=colorEX]|randomstart()| method to make a random starting point inside the volume (gen0). 
-It then uses the Uranium and Neutron class objects in loops to generate a sequence of fission reactions inside the mass. If a particle fall outside of the object, it won't be used for fission anymore.
+It then uses the Uranium and Neutron class objects in loops to generate a sequence of fission reactions inside the mass. If a particle falls outside of the object, it won't be used for fission anymore.
 
 The code supports up to seven generations of fission, but it usually doesn't get that far in the plots for the subclasses. If the lists for all generations are made, we will loop over these lists once again using a private \lstinline[language=PythonPlus, style=colorEX]|plot_function()| method. 
 
@@ -44,7 +44,7 @@ Because it inherits almost all functions from the Simulator class, we will quick
 
 As mentioned in the previous section, the \lstinline[language=PythonPlus, style=colorEX]|__repr__| and \lstinline[language=PythonPlus, style=colorEX]|__str__| functions are unique for each of the subclasses.
 
-For the \lstinline[language=PythonPlus, style=colorEX]|randomstart()| function, we use three separate RNG keys for each of the coordinates. This assures no connection between the variables. Every variable then gets a random uniformly distributed value between -0.5 and 0.5, which we mutliply with the corresponding value for width or depth. This function then returns a named tuple.
+For the \lstinline[language=PythonPlus, style=colorEX]|randomstart()| function, we use three separate RNG keys for each of the coordinates. This assures no connection between the variables. Every variable then gets a random uniformly distributed value between -0.5 and 0.5, which we multiply with the corresponding value for width or depth. This function then returns a named tuple.
 
 For the check whether a particle is inside the object (\lstinline[language=PythonPlus, style=colorEX]|in_object(x, y, z)|), we use the conditions mentioned in section \ref{beam} inside a \lstinline[language=PythonPlus, style=colorEX]|bool()| function. This standard function returns true if all the conditions inside the brackets are met and false if not.
 

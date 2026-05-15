@@ -11,7 +11,7 @@ If the survivor fraction ($f$) is lower than 1, we can conclude that we are belo
 
 If the survivor fraction is higher than 1, we can conclude that the reaction has gone supercritical.
 
-By changing the mass (user input), we can try to find the point at which the survivor fraction is 1. To make sure this is accurate, we will allow the user to insert an amount of points ($N$) that need to be simulated. we will then simulate those $N$ random points inside the volume. this will be our first generation. We will then simulate fission for each of those $N$ points. If we check whether the neutrons are inside the volume, we can calculate the survivor fraction with the formula:
+By changing the mass (user input), we can try to find the point at which the survivor fraction is 1. To make sure this is accurate, we will allow the user to insert an amount of points ($N$) that need to be simulated. We will then simulate those $N$ random points inside the volume. this will be our first generation. We will then simulate fission for each of those $N$ points. If we check whether the neutrons are inside the volume, we can calculate the survivor fraction with the formula:
 \begin{equation}
 	f=\frac{N_{\text{inside volume}}}{N_{\text{gen 1}}}
 \end{equation}
@@ -38,7 +38,7 @@ For the beam, we will assume that the mass ($M$) is equal to the volume ($V$). W
 Here, $a$ is the width and the height of the beam and $b$ is the depth of the beam. If we want to calculate $a$ and $b$, we can derive following equations\supcite{opgave}:
 \begin{align}
 	a&=\sqrt[3]{M*S} \\
-	b&=\sqrt[3]{\frac{M}{S^2}}
+	b&=\sqrt[3]{\frac{M}{S^2}} \label{depth}
 \end{align}
 We can thus see that for $S=1$, we get a perfect square.
 
